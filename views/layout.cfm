@@ -1,6 +1,17 @@
-<!--- Place HTML here that should be used as the default layout of your application --->
+<cfoutput>
+<!DOCTYPE HTML>
 <html>
-	<body>
-		<cfoutput>#includeContent()#</cfoutput>
-	</body>
-</html>
+<head>
+<title>Fonn.com</title>
+
+<!---#styleSheetLinkTag("reset,font,main")#--->
+
+</head>
+
+<body>
+	#includeContent()#
+	#javascriptIncludeTag("jquery.min,main")#
+</body>
+
+</html> 
+</cfoutput>
