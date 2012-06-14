@@ -1,0 +1,7 @@
+.ajaxLoader{
+	background: url('/images/ajax-loader.gif');
+	display: none;
+	height: 55px;
+	position: absolute;
+	width: 55px;
+}

@@ -4,11 +4,12 @@
 <head>
 <title>Fonn.com</title>
 
-<!---#styleSheetLinkTag("reset,font,main")#--->
+#styleSheetLinkTag("main")#
 
 </head>
 
 <body>
+	<div class="ajaxLoader"></div>
 	#includeContent()#
 	#javascriptIncludeTag("jquery.min,main")#
 </body>

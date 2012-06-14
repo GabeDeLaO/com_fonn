@@ -7,6 +7,9 @@
 	<div id="menu">
 		
 		#linkTo(controller="admin",action="companies", text="Companies Manager", id="companies-manager")#
+		#linkTo(controller="admin",action="admin-users-manager", text="Admin Users Manager", id="adminusers-manager")#
+		
+		#linkTo(controller="campaign", action="index", text="Manage Campaigns")#
 		
 	</div>
 

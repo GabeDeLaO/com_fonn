@@ -9,6 +9,9 @@ fnn.addCompanyForm 		= 	$("#add-company-form");
 fnn.addCompanyBtn		=	$("#add-companyBtn");
 fnn.editCompanyForm 	= 	$("#edit-company-form");
 fnn.editCompanyBtn		=	$("#edit-companyBtn");
+fnn.ajaxLoader			=	$(".ajaxLoader");
+fnn.deleteCompanyBtn	=	$(".delete-companyBtn");
+fnn.addAdminUserBtn		=	$("#add-adminUserBtn");
 
 // On doc ready.
 $(function(){
@@ -22,15 +25,35 @@ $(function(){
 
 function init(){
 	
+	fnn.loading();
 	fnn.login();
 	fnn.logout();
 	fnn.addCompany();
 	fnn.editCompany();
+	fnn.deleteCompany();
+	fnn.ajaxPostInterceptor();
+	fnn.ajaxLinkInterceptor();
 	
 }
 
 
 // Functions.
+
+fnn.loading = function(){
+	
+	fnn.ajaxLoader.ajaxStart(function(){
+		
+		$(this).show();
+		
+	});
+	
+	fnn.ajaxLoader.ajaxComplete(function(){
+		
+		$(this).fadeOut("slow");
+		
+	});
+	
+}
 
 fnn.login = function(email,password){
 
@@ -192,4 +215,130 @@ fnn.editCompany = function(){
 	
 }
 
+fnn.deleteCompany = function(){
+	
+	$(".delete-companyBtn").each(function(){
+		
+		$(this).click(function(e){
+		
+			e.preventDefault();
+			
+			$.ajax({
+				
+				type: 'post',
+				url: $(this).attr("href")+'?format=json',
+				error: function(xhr,type,exception){
+					alert("Oops, something went wrong.");
+				},
+				success: function(response){
+					
+					if( response.PASS == true ){
+						
+						window.location.href = '/index.cfm/admin/companies';
+						
+					}
+					
+				}
+				
+			});
+			
+		});
+		
+	});
+}
+
+
+fnn.ajaxPostInterceptor = function(){
+	
+	// Find an ajax form.
+	$(".ajaxForm").on("submit", function(e){
+		
+		e.preventDefault();
+		
+		var afterSubmission = $("input[name='afterSubmission']").val();
+		var goTo = '/index.cfm/admin/'+$("input[name='goTo']").val();
+		
+		
+		$.ajax({
+			
+			type: 'post',
+			url: $(this).attr("action")+'?format=json',
+			data: $(this).serialize(),
+			error: function(xhr,type,exception){
+				alert("Oops, something went wrong");
+			},
+			success: function(response){
+				
+				if( response.PASS == true ){
+					
+					if( afterSubmission == 'relocate' ){
+						
+						window.location.href = goTo;
+						
+					}else{
+						
+						fnn.feedback.hide().html(response.MESSAGE).fadeIn("slow");	
+						
+					}
+					
+				}else{
+					
+					fnn.feedback.hide().html(response.MESSAGE).fadeIn("slow");
+					
+				}
+				
+			}
+			
+		});
+		
+		
+	});
+	
+}
+
+
+fnn.ajaxLinkInterceptor = function(){
+	
+	$(".ajaxLinkPost").on("click",function(e){
+		
+		e.preventDefault();
+		
+		var afterClick = 'reload';
+		var goTo = $(this).attr("rel");
+		
+		$.ajax({
+			
+			type: 'post',
+			url: $(this).attr("href")+'?format=json',
+			error: function(xhr,type,exception){
+				alert("Oops, something went wrong");
+			},
+			success: function(response){
+				
+				if( response.PASS == true ){
+					
+					if( afterClick == 'reload' ){
+						
+						window.location.href = goTo;
+						
+					}else{
+						
+						fnn.feedback.hide().html(response.MESSAGE).fadeIn("slow");	
+						
+					}
+					
+				}else{
+					
+					fnn.feedback.hide().html(response.MESSAGE).fadeIn("slow");
+					
+				}
+				
+			}
+			
+		});
+		
+		
+	})
+	
+}
 
