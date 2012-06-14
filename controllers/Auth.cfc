@@ -59,7 +59,7 @@ component extends="Controller"{
 			//Clear out the session.
 			structDelete(session, "authUser");
 			
-			results.success = true;
+			results.pass = true;
 			
 		}else{
 			
@@ -68,6 +68,8 @@ component extends="Controller"{
 			redirectTo(action="login");
 			
 		}
+		
+		renderWith(results);
 	
 	}
 

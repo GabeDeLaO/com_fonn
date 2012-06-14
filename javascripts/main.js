@@ -111,7 +111,7 @@ fnn.logout = function(){
 				//window.location.href = '/index.cfm/admin/index';
 				if( response.PASS == true ){
 					
-					window.location.href = '/index.cfm/login/index';
+					window.location.href = '/index.cfm/auth/log-in';
 					
 				}else{
 					
