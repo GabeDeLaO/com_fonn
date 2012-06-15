@@ -15,7 +15,7 @@
 				<li>
 					#companies.companyName#
 					- #linkTo(action="edit-company", text="edit", key=companies.id)#
-					| #linkTo(action="remove-company", text="delete", key=companies.id, class="delete-companyBtn")#
+					| #linkTo(action="remove-company", text="delete", key=companies.id,class="ajaxLinkPost", rel="companies")#
 				</li>
 				
 			</cfloop>

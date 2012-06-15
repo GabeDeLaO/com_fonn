@@ -32,7 +32,7 @@ function init(){
 	fnn.editCompany();
 	fnn.deleteCompany();
 	fnn.ajaxPostInterceptor();
-	fnn.ajaxLinkInterceptor();
+	fnn.ajaxLinkDeleteInterceptor();
 	
 }
 
@@ -256,7 +256,7 @@ fnn.ajaxPostInterceptor = function(){
 		e.preventDefault();
 		
 		var afterSubmission = $("input[name='afterSubmission']").val();
-		var goTo = '/index.cfm/admin/'+$("input[name='goTo']").val();
+		var goTo = '/index.cfm/'+$("input[name='goTo']").val();
 		
 		
 		$.ajax({
@@ -297,7 +297,7 @@ fnn.ajaxPostInterceptor = function(){
 }
 
 
-fnn.ajaxLinkInterceptor = function(){
+fnn.ajaxLinkDeleteInterceptor = function(){
 	
 	$(".ajaxLinkPost").on("click",function(e){
 		
@@ -306,36 +306,40 @@ fnn.ajaxLinkInterceptor = function(){
 		var afterClick = 'reload';
 		var goTo = $(this).attr("rel");
 		
-		$.ajax({
-			
-			type: 'post',
-			url: $(this).attr("href")+'?format=json',
-			error: function(xhr,type,exception){
-				alert("Oops, something went wrong");
-			},
-			success: function(response){
+		if(confirm("Are you sure you want to delete this?")){
+		
+			$.ajax({
 				
-				if( response.PASS == true ){
+				type: 'post',
+				url: $(this).attr("href")+'?format=json',
+				error: function(xhr,type,exception){
+					alert("Oops, something went wrong");
+				},
+				success: function(response){
 					
-					if( afterClick == 'reload' ){
+					if( response.PASS == true ){
 						
-						window.location.href = goTo;
+						if( afterClick == 'reload' ){
+							
+							window.location.href = goTo;
+							
+						}else{
+							
+							fnn.feedback.hide().html(response.MESSAGE).fadeIn("slow");	
+							
+						}
 						
 					}else{
 						
-						fnn.feedback.hide().html(response.MESSAGE).fadeIn("slow");	
+						fnn.feedback.hide().html(response.MESSAGE).fadeIn("slow");
 						
 					}
 					
-				}else{
-					
-					fnn.feedback.hide().html(response.MESSAGE).fadeIn("slow");
-					
 				}
 				
-			}
-			
-		});
+			});
+		
+		}
 		
 		
 	})

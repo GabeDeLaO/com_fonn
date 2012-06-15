@@ -12,7 +12,7 @@
 		
 		#hiddenFieldTag(
 			name="goTo",
-			value="admin-users-manager"
+			value="admin/admin-users-manager"
 		)#
 	
 		#textField(
