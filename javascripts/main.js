@@ -346,3 +346,37 @@ fnn.ajaxLinkDeleteInterceptor = function(){
 	
 }
 
+fnn.couponLink = function(){
+	
+	$("#couponLink").on("click",function(e)){
+		
+		e.preventDefault();
+		
+		//Check for session.
+		$.ajax({
+			
+			type: 'post',
+			url: '/index.cfm/main/gaveUsEmail?format=json',
+			error: function(xhr,type,exception){
+				alert("Oops, something went wrong");
+			},
+			success: function(response){
+				
+				if( response.PASS == true ){
+					
+					//Request the coupon.
+					
+				}else{
+					
+					// Provide us the email.
+					
+				}
+				
+			}
+			
+		});
+		
+	}
+	
+}
+

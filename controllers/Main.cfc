@@ -21,5 +21,37 @@ component extends="Controller"{
 		campaign = model("campaign").findByKey(params.key);
 		
 	}
+	
+	/* Email checker. */
+	function gaveUsEmail(){
+		
+		var results = structNew();
+		
+		if( structKeyExists(session.user.email) ){
+		
+			results.pass=true;
+		
+		}else{
+			
+			results.pass=false;
+			
+		}
+		
+	}
+	
+	function setUserEmail(){
+		
+		var results = structNew();
+		var email = params.email;
+		
+		if( isEmail(email) ){
+			session.authUser.email = email;			
+			results.pass=true;
+		}else{
+			
+			results.pass=false;
+			
+		}
+	}
 
 }
