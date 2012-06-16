@@ -10,7 +10,15 @@ component extends="Controller"{
 	/* Main Home Page. */
 	function index(){
 		
-		renderNothing();
+		campaigns = model("campaign").findAll();
+		
+	}
+	
+	
+	/* Coupon/Campaign Profile. */
+	function profile(){
+		
+		campaign = model("campaign").findByKey(params.key);
 		
 	}
 

@@ -11,6 +11,7 @@ component extends="Controller"{
 	function create(){
 		
 		
+		
 	}
 	
 	/* Edit a coupon. */
