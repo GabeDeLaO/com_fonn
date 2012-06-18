@@ -13,6 +13,8 @@ fnn.ajaxLoader			=	$(".ajaxLoader");
 fnn.deleteCompanyBtn	=	$(".delete-companyBtn");
 fnn.addAdminUserBtn		=	$("#add-adminUserBtn");
 
+pri = {};
+
 // On doc ready.
 $(function(){
 	
@@ -33,6 +35,7 @@ function init(){
 	fnn.deleteCompany();
 	fnn.ajaxPostInterceptor();
 	fnn.ajaxLinkDeleteInterceptor();
+	fnn.couponLink();
 	
 }
 
@@ -79,7 +82,7 @@ fnn.login = function(email,password){
 				}else{
 					
 					fnn.feedback.text(response.MESSAGE);
-					console.log(response.MESSAGE);	
+					
 				}
 				
 			},
@@ -275,6 +278,10 @@ fnn.ajaxPostInterceptor = function(){
 						
 						window.location.href = goTo;
 						
+					}else if( afterSubmission == 'rerender' ){
+						
+						$("#couponLink").trigger("click");
+						
 					}else{
 						
 						fnn.feedback.hide().html(response.MESSAGE).fadeIn("slow");	
@@ -348,7 +355,7 @@ fnn.ajaxLinkDeleteInterceptor = function(){
 
 fnn.couponLink = function(){
 	
-	$("#couponLink").on("click",function(e)){
+	$("#couponLink").on("click",function(e){
 		
 		e.preventDefault();
 		
@@ -365,10 +372,12 @@ fnn.couponLink = function(){
 				if( response.PASS == true ){
 					
 					//Request the coupon.
+					pri.SendCoupon($("#couponLink").attr("href"));
 					
 				}else{
 					
 					// Provide us the email.
+					pri.ProvideEmail();
 					
 				}
 				
@@ -376,7 +385,41 @@ fnn.couponLink = function(){
 			
 		});
 		
-	}
+	});
+	
+}
+
+pri.ProvideEmail = function(){
+	
+	$("#email-box").fadeIn("slow");
+	
+}
+
+pri.SendCoupon = function(couponRequest){
+
+	//Request the coupon.
+	$.ajax({
+			
+		type: 'post',
+		url: couponRequest+'?format=json',
+		error: function(xhr,type,exception){
+			alert("Oops, something went wrong");
+		},
+		success: function(response){
+			
+			if( response.PASS == true ){
+				
+				fnn.feedback.hide().html(response.MESSAGE).fadeIn("slow");
+				
+			}else{
+				
+				fnn.feedback.hide().html(response.MESSAGE).fadeIn("slow");
+				
+			}
+			
+		}
+		
+	});
 	
 }
 

@@ -1,9 +1,40 @@
 <cfoutput>
-
+	
+	<div id="feedback"></div>
+	
 	<h1>#campaign.campaignName#</h1>
 	
 	<p>#campaign.description#</p>
 	
-	#linkTo(action="requestCoupon", text="Send me this coupon", key=campaign.id, id="couponLink")#
+	#linkTo(controller="coupon", action="requestCoupon", text="Send me this coupon", key=campaign.id, id="couponLink")#
+	
+	<div id="email-box">
+		
+		<p>Please provide your email.</p>
+		
+		#startFormTag(action="setUserEmail", class="ajaxForm")#
+			
+			#textFieldTag(
+				name="email",
+				label="email"
+			)#
+			
+			#hiddenFieldTag(
+				name="afterSubmission",
+				value="rerender"	
+			)#
+			
+			#hiddenFieldTag(
+				name="goTo",
+				value="couponLink"
+			)#
+			
+			#submitTag(
+				value="Save Email"
+			)#
+			
+		#endFormTag()#
+		
+	</div>
 	
 </cfoutput>
