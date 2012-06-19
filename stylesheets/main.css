@@ -1,3 +1,17 @@
+#wrapper{
+	background: black;
+	color: white;
+	margin: 0px auto;
+	width: 960px;
+}
+
+#header{
+	background: red;
+	float: left;
+	height: 117px;
+	width: 960px;
+}
+
 .ajaxLoader{
 	background: url('/images/ajax-loader.gif');
 	display: none;
@@ -8,4 +22,22 @@
 
 #email-box{
 	display: none;
+}
+
+.coupon-box{
+	background: blue;
+	display: block;
+	float: left;
+	height: 180px;
+	margin: 0 8px 0 0;
+	padding: 10px;
+	width: 170px;
+}
+
+.coupon-image{
+	background: white;
+	display: block;
+	float: left;
+	height: 129px;
+	width: 170px;
 }

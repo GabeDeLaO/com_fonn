@@ -11,7 +11,10 @@
 <ul>
 	
 	<cfloop query="campaigns">
-		<li>
+		<li class="coupon-box">
+			<div class="coupon-image">
+				
+			</div>
 			#campaigns.campaignName#
 			- #linkTo(action="profile", text="view", key=campaigns.id)#
 		</li>

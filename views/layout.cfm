@@ -4,14 +4,19 @@
 <head>
 <title>Fonn.com</title>
 
-#styleSheetLinkTag("main")#
+#styleSheetLinkTag("reset,main")#
 
 </head>
 
 <body>
-	<div class="ajaxLoader"></div>
-	#includeContent()#
-	#javascriptIncludeTag("jquery.min,main")#
+	<div id="wrapper">
+		<div id="header">
+			FONN.com
+		</div>
+		<div class="ajaxLoader"></div>
+		#includeContent()#
+		#javascriptIncludeTag("jquery.min,main")#
+	</div>
 </body>
 
 </html> 
