@@ -15,7 +15,7 @@
 			<div class="coupon-image">
 				
 			</div>
-			#campaigns.campaignName#
+			#campaigns.campaignName# #DollarFormat(campaigns.campaignValue)#
 			- #linkTo(action="profile", text="view", key=campaigns.id)#
 		</li>
 	</cfloop>

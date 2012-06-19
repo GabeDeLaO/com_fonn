@@ -27,6 +27,7 @@ $(function(){
 
 function init(){
 	
+	fnn.browserDetection();
 	fnn.loading();
 	fnn.login();
 	fnn.logout();
@@ -39,6 +40,29 @@ function init(){
 	
 }
 
+
+// Browser width detection.
+fnn.browserDetection = function(){
+	
+	if ( parseInt($(window).width()) < 480 ){
+		$("#size-stylesheet").attr("href", "/stylesheets/mobile.css");
+    } else {
+       $("#size-stylesheet").attr("href", "/stylesheets/main.css"); 
+    }
+	
+	
+	$(window).resize(function() {
+	  	
+	    width = parseInt($(this).width());
+	    
+	    if (width < 480) {
+	        $("#size-stylesheet").attr("href", "/stylesheets/mobile.css");
+	    } else {
+	       $("#size-stylesheet").attr("href", "/stylesheets/main.css"); 
+	    }
+    
+    });
+}
 
 // Functions.
 

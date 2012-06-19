@@ -20,6 +20,14 @@ component extends="Controller"{
 		var days = 0;
 		
 		timeSpans = model("couponTimeSpan").findAll();
+		
+		userPermission = model("adminuser").findByKey(session.authUser.id);
+		
+		if( userPermission.role IS 1 ){
+			companies = model("company").findAll();
+		}else{
+			companies = model("company").findAll(where="id=session.authUser.companyid");
+		}
 		campaign = model("campaign").new();
 		
 		if( isAjax() && isPost() ){
@@ -51,6 +59,15 @@ component extends="Controller"{
 		var days = 0;
 		
 		timeSpans = model("couponTimeSpan").findAll();
+		
+		userPermission = model("adminuser").findByKey(session.authUser.id);
+		
+		if( userPermission.role IS 1 ){
+			companies = model("company").findAll();
+		}else{
+			companies = model("company").findAll(where="id=session.authUser.companyid");
+		}
+		
 		campaign = model("campaign").findByKey(params.key);
 		
 		if( isAjax() && isPost() ){

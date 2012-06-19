@@ -13,6 +13,13 @@
 			value="campaign/index"
 		)#
 		
+		#selectTag(
+			name="companyid",
+			options=companies,
+			label="company",
+			selected=campaign.companyId
+		)#
+		
 		#textField(
 			objectName="campaign",
 			property="campaignName"
@@ -48,6 +55,11 @@
 			name="couponExpirationTimeSpan",
 			options=timeSpans,
 			selected=campaign.couponTimeSpan
+		)#
+		
+		#textField(
+			objectName="campaign",
+			property="campaignValue"
 		)#
 		
 		#submitTag(

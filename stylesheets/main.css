@@ -1,3 +1,11 @@
+#wheels-debug-area{
+	display: none;
+}
+
+body{
+	background: black;	
+}
+
 #wrapper{
 	background: black;
 	color: white;
@@ -10,6 +18,23 @@
 	float: left;
 	height: 117px;
 	width: 960px;
+}
+
+#logo{
+	background: white;
+	display: block;
+	float: left;
+	height: 117px;
+	width: 327px;
+}
+
+#header-banner{
+	background: white;
+	display: block;
+	float: right;
+	height: 117px;
+	margin: 0 20px 0 0;
+	width: 468px;
 }
 
 .ajaxLoader{
@@ -25,19 +50,21 @@
 }
 
 .coupon-box{
-	background: blue;
+	background: white;
+	color: black;
 	display: block;
 	float: left;
 	height: 180px;
-	margin: 0 8px 0 0;
+	margin: 0 50px 50px 0;
 	padding: 10px;
 	width: 170px;
 }
 
 .coupon-image{
-	background: white;
+	background: #8ac2e4;
 	display: block;
 	float: left;
 	height: 129px;
+	margin: 0 0 10px 0;
 	width: 170px;
 }
