@@ -9,7 +9,8 @@
 
 </head>
 
-<body>
+<cfset bodyID = ( structKeyexists(variables,"bodyID") )? variables.bodyID: "" />
+<body id="#bodyID#">
 	<div id="wrapper">
 		<div id="header">
 			<div id="logo">

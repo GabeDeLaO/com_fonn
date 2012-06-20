@@ -37,6 +37,34 @@ body{
 	width: 468px;
 }
 
+#profile #header{
+	background: red;
+	float: left;
+	height: 50px;
+	width: 960px;
+}
+
+#profile #logo{
+	background: white;
+	display: block;
+	float: left;
+	height: 50px;
+	width: 327px;
+}
+
+#profile #header-banner{
+	display: none;
+	height: 50px;
+}
+
+#profile #company-banner{
+	background: #0c89f5;
+	display: block;
+	float: left;
+	height: 300px;
+	width: 960px;
+}
+
 .ajaxLoader{
 	background: url('/images/ajax-loader.gif');
 	display: none;

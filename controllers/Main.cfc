@@ -18,6 +18,7 @@ component extends="Controller"{
 	/* Coupon/Campaign Profile. */
 	function profile(){
 		
+		bodyID = "profile";
 		campaign = model("campaign").findByKey(params.key);
 		
 	}

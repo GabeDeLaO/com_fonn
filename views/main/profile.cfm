@@ -1,5 +1,7 @@
 <cfoutput>
 	
+	<div id="company-banner"></div>
+	
 	<div id="feedback"></div>
 	
 	<h1>#campaign.campaignName#</h1>
