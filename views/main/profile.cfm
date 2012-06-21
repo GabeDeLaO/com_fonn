@@ -6,6 +6,10 @@
 	
 	<h1>#campaign.campaignName#</h1>
 	
+	<p>#campaign.company.companyName#</p>
+	
+	<p>#campaign.restrictions#</p>
+	
 	<p>#campaign.description#</p>
 	
 	#linkTo(controller="coupon", action="requestCoupon", text="Send me this coupon", key=campaign.id, id="couponLink")#

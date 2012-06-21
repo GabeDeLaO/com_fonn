@@ -19,7 +19,7 @@ component extends="Controller"{
 	function profile(){
 		
 		bodyID = "profile";
-		campaign = model("campaign").findByKey(params.key);
+		campaign = model("campaign").findByKey(key=params.key,include="company");
 		
 	}
 	

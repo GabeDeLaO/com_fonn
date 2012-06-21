@@ -1,6 +1,5 @@
 <cfoutput>
 
-
 	#startFormTag(action="edit", id="compaign-edit-form", class="ajaxForm", key=params.key)#
 		
 		#hiddenFieldTag(
@@ -59,7 +58,7 @@
 		
 		#textField(
 			objectName="campaign",
-			property="campaignValue"
+			property="restrictions"
 		)#
 		
 		#submitTag(

@@ -60,6 +60,11 @@
 			property="campaignValue"
 		)#
 		
+		#textArea(
+			objectName="campaign",
+			property="restrictions"
+		)#
+		
 		#submitTag(
 			value="Create Campaign"
 		)#
