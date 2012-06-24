@@ -46,7 +46,7 @@
 <body id="#bodyID#" onload="initialize()">
 	<div id="wrapper">
 		<div id="header">
-			<div id="logo">Fonn.com</div>
+			<a href="/"><div id="logo">Fonn.com</div></a>
 			<div id="header-banner">
 			
 			</div>

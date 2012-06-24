@@ -18,6 +18,15 @@ body#profile{
 	width: 960px;
 }
 
+h2{
+	font-size: 16px;
+}
+
+.greeting{
+	margin: 0px 0 20px 0;
+	padding: 2px;
+}
+
 h5{
 	font-size: 16px;
 	font-weight: bold;
@@ -104,7 +113,7 @@ h5{
 }
 
 .coupon-image{
-	background: #8ac2e4;
+	background: black;
 	display: block;
 	float: left;
 	height: 129px;
