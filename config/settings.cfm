@@ -17,4 +17,10 @@
 	set(dataSourceName="fonn");
 	set(URLRewriting="Partial");
 	
+	// Field defaults.	
+	set(functionName="textField", labelPlacement="before",prepend="",prependToLabel="",appendToLabel="",append="");
+	set(functionName="textFieldTag", labelPlacement="before",prepend="",prependToLabel="",appendToLabel="",append="");
+	set(functionName="passwordField", labelPlacement="before",prepend="",prependToLabel="",appendToLabel="",append="");
+	set(functionName="passwordFieldTag", labelPlacement="before",prepend="",prependToLabel="",appendToLabel="",append="");
+	
 </cfscript>

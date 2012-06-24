@@ -3,7 +3,12 @@
 }
 
 body{
-	background: black;	
+	background: url(/images/background.jpg) no-repeat black;
+	font-family: sans-serif;	
+}
+
+body#profile{
+	background: black;
 }
 
 #wrapper{
@@ -13,19 +18,24 @@ body{
 	width: 960px;
 }
 
+h5{
+	font-size: 16px;
+	font-weight: bold;
+}
+
 #header{
-	background: red;
 	float: left;
 	height: 117px;
 	width: 960px;
 }
 
 #logo{
-	background: white;
+	background: url(/images/logo.png);
 	display: block;
 	float: left;
 	height: 117px;
-	width: 327px;
+	text-indent: -999em;
+	width: 335px;
 }
 
 #header-banner{
@@ -33,19 +43,18 @@ body{
 	display: block;
 	float: right;
 	height: 117px;
-	margin: 0 20px 0 0;
+	margin: 0 55px 0 0;
 	width: 468px;
 }
 
 #profile #header{
-	background: red;
 	float: left;
 	height: 50px;
 	width: 960px;
 }
 
 #profile #logo{
-	background: white;
+	background: url(/images/logosmall.png) no-repeat;
 	display: block;
 	float: left;
 	height: 50px;
@@ -58,7 +67,7 @@ body{
 }
 
 #profile #company-banner{
-	background: #0c89f5;
+	background: url(/images/profilebanner.jpg);
 	display: block;
 	float: left;
 	height: 300px;
@@ -83,9 +92,15 @@ body{
 	display: block;
 	float: left;
 	height: 180px;
-	margin: 0 50px 50px 0;
+	margin: 0 45px 45px 0;
 	padding: 10px;
 	width: 170px;
+	
+	-webkit-border-radius: 10px 10px 0px 0px;
+    -moz-border-radius: 10px 10px 0px 0px;
+    border-radius: 10px 10px 0px 0px;
+    
+    behavior: url(/lib/PIE.htc);
 }
 
 .coupon-image{
@@ -95,4 +110,137 @@ body{
 	height: 129px;
 	margin: 0 0 10px 0;
 	width: 170px;
+}
+
+.left{
+	float: left;
+	width: 65%;
+}
+
+.right{
+	float: left;
+	width: 35%;
+}
+
+#profile-bar{
+	background: #ff0000;
+	border: 1px solid #ff0000;
+	display: block;
+	float: left;
+	height: 55px;
+	padding: 8px 5px 5px 8px;
+	width: 947px;
+	
+    -webkit-border-radius: 10px 10px 0px 0px;
+    -moz-border-radius: 10px 10px 0px 0px;
+    border-radius: 10px 10px 0px 0px;
+    
+    behavior: url(/lib/PIE.htc);
+}
+
+#deal-title{
+	font-size: 26px;
+}
+
+
+#btnSendCoupon{
+	background: #0096ff;
+	border: 1px solid #0096ff;
+	color: white;
+	display: block;
+	/*height: 22px;*/
+	padding: 2px;
+	text-align: center;
+	
+	-webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    
+    behavior: url(/lib/PIE.htc);
+}
+
+/* Form. */
+label{
+	display: block;
+	float: left;
+	line-height: 22px;
+}
+
+input[type='text']{
+	float: left;
+	margin: 0 5px;
+}
+
+input[type='submit']{
+	cursor: pointer;
+}
+
+.fine-print{
+	color: #0096ff;
+	font-size: 12px;
+	margin: 10px 0;
+	width: 560px;
+}
+
+#content{
+	background: white;
+	color: black;
+	float: left;
+	margin: 0 0 10px 5px;
+	padding: 10px;
+	width: 930px;
+	
+	-webkit-border-radius: 0px 0px 10px 10px;
+    -moz-border-radius: 0px 0px 10px 10px;
+    border-radius: 0px 0px 10px 10px;
+    
+    behavior: url(/lib/PIE.htc);
+	
+}
+
+.overview{
+	font-size: 12px;
+	line-height: 1.4em;
+	margin: 5px 0 0 0;
+	width: 520px;
+}
+
+#couponLink{
+	color: white;
+}
+
+#company-location{
+	text-align: right;
+	font-size: 14px;
+	line-height: 1.2em;
+	margin: 10px 0 10px 0;
+}
+
+#map_canvas{
+	display: block;
+	float: left;
+	height: 300px;
+}
+
+#campaign-info{
+	float: left;
+	height: 40px;
+	font-size: 22px;
+	margin: 10px 0 0 0;
+	padding: 10px 0 0 10px;
+	width: 950px;
+}
+
+#main{
+    display: block;
+    float: left;
+    margin: 40px 0 0 0;
+    padding: 10px 0 0 10px;
+    width: 950px;
+}
+
+
+#profile #main{
+	margin: 5px 0 0 0;
+	padding: 0px;
 }

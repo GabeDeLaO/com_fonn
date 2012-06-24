@@ -401,6 +401,7 @@ fnn.couponLink = function(){
 				}else{
 					
 					// Provide us the email.
+					$("#couponLink").hide();
 					pri.ProvideEmail();
 					
 				}

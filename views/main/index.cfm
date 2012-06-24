@@ -1,12 +1,9 @@
 <cfoutput>
 
-<h1>Fonn.com</h1>
-
 <cfif isDefined("session.user") AND session.user.email NEQ "">
 	<h2>Welcome, #session.user.email#
 </cfif>
 
-<h3>Today's Deals</h3>
 
 <ul>
 	

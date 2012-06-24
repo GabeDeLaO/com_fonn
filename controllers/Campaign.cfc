@@ -34,6 +34,7 @@ component extends="Controller"{
 			
 			campaign = model("campaign").new(params.campaign);
 			campaign.couponTimeSpan = params.couponExpirationTimeSpan;
+			campaign.companyId = params.companyid;
 			campaign.approved = false;
 			
 			if( campaign.save() ){
@@ -74,6 +75,7 @@ component extends="Controller"{
 			
 			campaign.update(params.campaign);
 			campaign.couponTimeSpan = params.couponExpirationTimeSpan;
+			campaign.companyId = params.companyid;
 			
 			if( campaign.save() ){
 				
