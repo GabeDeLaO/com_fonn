@@ -27,10 +27,11 @@
 			label="city"
 		)#
 		
-		#textField(
+		#select(
 			objectName="company",
-			property="state",
-			label="state"
+			property="stateid",
+			options=states,
+			label="State"
 		)#
 		
 		#textField(
@@ -67,6 +68,8 @@
 			value="Add Company",
 			id="add-companyBtn"
 		)#
+		
+		<div class="clear"></div>
 	
 	#endFormTag()#
 

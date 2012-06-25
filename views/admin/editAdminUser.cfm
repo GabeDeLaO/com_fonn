@@ -33,7 +33,8 @@
 			id="edit-adminUserBtn"
 		)#
 	
-	
+		<div class="clear"></div>
+		
 	#endFormTag()#
 
 </cfoutput>

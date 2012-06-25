@@ -1,6 +1,7 @@
 <cfoutput>
 	
 	<div id="company-banner">
+		<img src="/images/campaigns/big/#campaign.company.largeImage#"/>
 	</div>
 	
 	<div id="campaign-info">
@@ -61,7 +62,7 @@
 		<div class="right">
 			<div id="company-location">
 				#campaign.company.companyName#<br/>
-				<span id="address">#campaign.company.address# #campaign.company.city#, #campaign.company.state# #campaign.company.zipcode#</span><br/>
+				<span id="address">#campaign.company.address# #campaign.company.city#, #state.stateAbv# #campaign.company.zipcode#</span><br/>
 				#campaign.company.phone#
 			</div>
 			

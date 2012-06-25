@@ -11,9 +11,9 @@
 		<a href="index.cfm/main/profile/#campaigns.id#">
 			<li class="coupon-box">
 				<div class="coupon-image">
-					
+					<img src="/images/campaigns/small/#campaigns.smallImage#"/>
 				</div>
-				#campaigns.campaignName# #DollarFormat(campaigns.campaignValue)#
+				<!---#campaigns.campaignName#---> #DollarFormat(campaigns.campaignValue)#
 			</li>
 		</a>
 	</cfloop>

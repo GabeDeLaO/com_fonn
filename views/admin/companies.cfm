@@ -2,6 +2,8 @@
 
 	<h1>Companies List</h1>
 	
+	<div id="admin-content">
+	
 	<cfif companies.recordCount >
 		
 		<p>
@@ -12,7 +14,9 @@
 			
 			<cfloop query="companies" startRow="#startRow#" endRow="#endRow#">
 				
-				<li>
+				<cfset rowColor = (companies.currentRow MOD 2 IS 0)?"light":"dark"/>
+				
+				<li class="#rowColor#">
 					#companies.companyName#
 					- #linkTo(action="edit-company", text="edit", key=companies.id)#
 					| #linkTo(action="remove-company", text="delete", key=companies.id,class="ajaxLinkPost", rel="companies")#
@@ -30,5 +34,7 @@
 		</p>
 		
 	</cfif>
+	
+	</div>
 
 </cfoutput>

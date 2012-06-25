@@ -31,7 +31,8 @@
 			value="Add Admin User",
 			id="add-adminUserBtn"
 		)#
-	
+		
+		<div class="clear"></div>
 	
 	#endFormTag()#
 

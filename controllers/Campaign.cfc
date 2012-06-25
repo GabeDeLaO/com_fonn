@@ -10,12 +10,14 @@ component extends="Controller"{
 	
 	function index(){
 		
+		bodyID = "admin";
 		campaigns = model("campaign").findAll();
 		
 	}
 	
 	function add(){
 		
+		bodyID = "admin";
 		var results = structNew();
 		var days = 0;
 		
@@ -56,6 +58,7 @@ component extends="Controller"{
 	
 	function edit(){
 		
+		bodyID = "admin";
 		var results = structNew();
 		var days = 0;
 		
@@ -97,6 +100,7 @@ component extends="Controller"{
 	/* Remove a campaign. */
 	function delete(){
 		
+		bodyID = "admin";
 		var results = structNew();
 		
 		if( isAjax() && isPost() ){

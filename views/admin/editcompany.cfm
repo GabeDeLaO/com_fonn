@@ -28,10 +28,11 @@
 			label="city"
 		)#
 		
-		#textField(
+		#select(
 			objectName="company",
-			property="state",
-			label="state"
+			property="stateid",
+			options=states,
+			label="State"
 		)#
 		
 		#textField(
@@ -68,7 +69,9 @@
 			value="Edit Company",
 			id="edit-companyBtn"
 		)#
-	
+		
+		<div class="clear"></div>
+		
 	#endFormTag()#
 
 </cfoutput>

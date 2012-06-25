@@ -253,3 +253,97 @@ input[type='submit']{
 	margin: 5px 0 0 0;
 	padding: 0px;
 }
+
+body#admin{
+	background: black;
+}
+
+#admin form{
+	background: #efefef;
+	display: block;
+	padding: 20px;
+}
+
+#admin label{
+	clear: both;
+	color: black;
+	display: block;
+	float: left;
+	font-size: 14px;
+	width: 150px;
+}
+
+#admin input{
+	clear: both;
+	float: left;
+	margin: 0 0 10px 0;
+	width: 150px;
+}
+
+#admin select{
+	clear: both;
+	float: left;
+	margin: 0 0 10px 0;
+	width: 150px;
+}
+
+#admin textarea{
+	clear: both;
+	float: left;
+	height: 120px;
+	margin: 0 0 10px 0;
+	padding: 5px;
+	width: 460px;
+}
+
+.form-line{
+	background: #efefef;
+	float: left;
+	width: 320px;
+}
+
+.clear{
+	clear: both;
+}
+
+#adminMenu{
+	float: left;
+}
+
+#adminMenu li{
+	color: #0099ff;
+	float: left;
+	list-style: none;
+	text-decoration: none;
+	margin: 20px 20px 0 10px;
+}
+
+#adminMenu li a{
+	color: #0099ff;
+}
+
+#adminMenu li a:hover{
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+#admin-content{
+	background: #efefef;
+	color: black;
+	padding: 10px;
+}
+
+#admin-content ul{
+	font-size: 14px;
+	list-style: none;
+	margin: 20px 0 0 0;
+}
+
+#admin-content ul li{
+	height: 22px;
+	line-height: 22px;
+}
+
+#admin-content ul li.dark{
+	background: #ccc;
+}

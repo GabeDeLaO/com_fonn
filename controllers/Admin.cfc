@@ -10,20 +10,21 @@ component extends="Controller"{
 	
 	function index(){
 		
-		
+		bodyID = "admin";
 		
 	}
 	
 	/* Manage Users. */
 	function users(){
 		
-		
+		bodyID = "admin";
 		
 	}
 	
 	/* Manage Companies. */
 	function companies(){
 		
+		bodyID = "admin";
 		companies = model("company").findAll();
 		startRow = 1;
 		endRow = companies.recordcount;
@@ -34,7 +35,9 @@ component extends="Controller"{
 		
 		var results = structNew();
 		
+		bodyID = "admin";
 		company = model("company").new();
+		states = model("state").findAll();
 		
 		if( isaJAX() && isPost() ){
 			
@@ -59,9 +62,12 @@ component extends="Controller"{
 	
 	function editCompany(){
 		
+		bodyID = "admin";
+		
 		var results = structNew();
 		
 		company = model("company").findByKey(params.key);
+		states = model("state").findAll();
 		
 		if( isAjax() && isPost() ){
 			
@@ -86,6 +92,8 @@ component extends="Controller"{
 	
 	function removeCompany(){
 		
+		bodyID = "admin";
+		
 		var results = structNew();
 		
 		if( isAjax() && isPost() ){
@@ -105,6 +113,8 @@ component extends="Controller"{
 	/* Manage Admin Users. */
 	function adminUsersManager(){
 		
+		bodyID = "admin";
+		
 		adminUsers = model("adminUser").findAll();
 		startRow = 1;
 		endRow = adminUsers.recordcount;
@@ -112,6 +122,8 @@ component extends="Controller"{
 	}
 	
 	function addAdminUser(){
+		
+		bodyID = "admin";
 		
 		adminUser = model("adminUser").new();
 		
@@ -140,6 +152,8 @@ component extends="Controller"{
 	}
 	
 	function editAdminUser(){
+		
+		bodyID = "admin";
 		
 		adminUser = model("adminUser").findByKey(params.key);
 		
@@ -175,6 +189,8 @@ component extends="Controller"{
 	
 	function deleteAdminUser(){
 		
+		bodyID = "admin";
+		
 		var results = structNew();
 		
 		if( isAjax() && isPost() ){
@@ -194,6 +210,7 @@ component extends="Controller"{
 	/* Manage Campaigns. */
 	function campaigns(){
 		
+		bodyID = "admin";
 		
 		
 	}

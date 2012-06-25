@@ -10,7 +10,7 @@ component extends="Controller"{
 	/* Main Home Page. */
 	function index(){
 		
-		campaigns = model("campaign").findAll();
+		campaigns = model("campaign").findAll(include="company");
 		
 	}
 	
@@ -20,6 +20,7 @@ component extends="Controller"{
 		
 		bodyID = "profile";
 		campaign = model("campaign").findByKey(key=params.key,include="company");
+		state = model("state").findByKey(campaign.company.stateid);
 		
 	}
 	

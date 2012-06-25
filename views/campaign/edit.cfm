@@ -15,7 +15,7 @@
 		#selectTag(
 			name="companyid",
 			options=companies,
-			label="company",
+			label="Company",
 			selected=campaign.companyId
 		)#
 		
@@ -56,7 +56,7 @@
 			selected=campaign.couponTimeSpan
 		)#
 		
-		#textField(
+		#textArea(
 			objectName="campaign",
 			property="restrictions"
 		)#
@@ -64,6 +64,8 @@
 		#submitTag(
 			value="Update Campaign"
 		)#
+	
+	<div class="clear"></div>
 	
 	#endFormTag()#
 

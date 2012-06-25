@@ -50,6 +50,13 @@
 			<div id="header-banner">
 			
 			</div>
+			<cfif params.controller IS 'Admin' OR params.controller IS 'campaign'>
+				<ul id="adminMenu">
+					<li>#linkTo(controller="admin",action="companies", text="Companies Manager", id="companies-manager")#</li>
+					<li>#linkTo(controller="admin",action="admin-users-manager", text="Admin Users Manager", id="adminusers-manager")#</li>
+					<li>#linkTo(controller="campaign", action="index", text="Manage Campaigns")#</li>
+				</ul>
+			</cfif>
 		</div>
 		<div id="main">
 			<div class="ajaxLoader"></div>
