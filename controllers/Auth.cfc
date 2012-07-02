@@ -25,6 +25,9 @@ component extends="Controller"{
 					session.authUser.id = authUser.id;
 					session.authUser.email = authUser.email;
 					session.authUser.role = authUser.role;
+					session.authUser.adminCompanyID = authUser.adminCompanyID;
+					session.authUser.token = hash(authUser.adminCompanyID);
+					session.authUser.superAdmin = (authUser.adminCompanyID IS 1)? TRUE : FALSE;
 					
 					results.pass = true;
 					results.message = "";

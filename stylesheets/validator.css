@@ -1,0 +1,32 @@
+body{
+	background: #efefef;
+	font-family: "Arial Narrow", "Arial", sans-serif;
+}
+
+
+#wrapper{
+	margin: 0 auto;
+	text-align: center;
+	width: 960px;
+}
+
+label{
+	font-size: 22px;
+}
+
+input[type="text"]{
+	border: 1px solid #bbbcbf;
+	font-size: 18px;
+	margin: 0 10px 0 10px;
+	padding: 4px;
+}
+
+input[type="submit"]{
+	font-size: 22px;
+	height: 30px;
+	width: 100px;
+}
+
+form{
+	margin: 60px 0 0 0;
+}
