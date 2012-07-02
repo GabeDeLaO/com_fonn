@@ -23,6 +23,9 @@ $(function(){
 				
 					if( response.PASS == true ){
 						
+						$("#validationMessage").text("Coupon code has been validated.");
+						$("#couponCode").val("");
+						
 					}else{
 						
 						$("#validationMessage").text(response.MESSAGE);

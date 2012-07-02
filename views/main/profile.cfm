@@ -1,7 +1,8 @@
 <cfoutput>
 	
 	<div id="company-banner">
-		<img src="/images/campaigns/big/#campaign.company.largeImage#"/>
+		<!---<img src="/images/campaigns/big/#campaign.company.largeImage#"/>--->
+		#includePartial("profileBanners")#
 	</div>
 	
 	<div id="campaign-info">

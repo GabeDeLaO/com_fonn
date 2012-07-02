@@ -1,0 +1,101 @@
+@font-face {
+    font-family: 'Folks-BoldFolks-Bold';
+    src: url('../miscellaneous/fonts/folks-bold-webfont.eot');
+    src: url('../miscellaneous/fonts/folks-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../miscellaneous/fonts/folks-bold-webfont.woff') format('woff'),
+         url('../miscellaneous/fonts/folks-bold-webfont.ttf') format('truetype'),
+         url('../miscellaneous/fonts/folks-bold-webfont.svg#Folks-BoldFolks-Bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'Folks-HeavyRegular';
+    src: url('../miscellaneous/fonts/folks-heavy-webfont.eot');
+    src: url('../miscellaneous/fonts/folks-heavy-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../miscellaneous/fonts/folks-heavy-webfont.woff') format('woff'),
+         url('../miscellaneous/fonts/folks-heavy-webfont.ttf') format('truetype'),
+         url('../miscellaneous/fonts/folks-heavy-webfont.svg#Folks-HeavyRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'Folks-LightRegular';
+    src: url('../miscellaneous/fonts/folks-light-webfont.eot');
+    src: url('../miscellaneous/fonts/folks-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../miscellaneous/fonts/folks-light-webfont.woff') format('woff'),
+         url('../miscellaneous/fonts/folks-light-webfont.ttf') format('truetype'),
+         url('../miscellaneous/fonts/folks-light-webfont.svg#Folks-LightRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'FolksRegular';
+    src: url('../miscellaneous/fonts/folks-normal-webfont.eot');
+    src: url('../miscellaneous/fonts/folks-normal-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../miscellaneous/fonts/folks-normal-webfont.woff') format('woff'),
+         url('../miscellaneous/fonts/folks-normal-webfont.ttf') format('truetype'),
+         url('../miscellaneous/fonts/folks-normal-webfont.svg#FolksRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'FolksBlackRegular';
+    src: url('../miscellaneous/fonts/folksblack-webfont.eot');
+    src: url('../miscellaneous/fonts/folksblack-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../miscellaneous/fonts/folksblack-webfont.woff') format('woff'),
+         url('../miscellaneous/fonts/folksblack-webfont.ttf') format('truetype'),
+         url('../miscellaneous/fonts/folksblack-webfont.svg#FolksBlackRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'FolksShadesRegular';
+    src: url('../miscellaneous/fonts/folksshades-webfont.eot');
+    src: url('../miscellaneous/fonts/folksshades-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../miscellaneous/fonts/folksshades-webfont.woff') format('woff'),
+         url('../miscellaneous/fonts/folksshades-webfont.ttf') format('truetype'),
+         url('../miscellaneous/fonts/folksshades-webfont.svg#FolksShadesRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'FolksXXHeavy';
+    src: url('../miscellaneous/fonts/folksxxheavy-webfont.eot');
+    src: url('../miscellaneous/fonts/folksxxheavy-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../miscellaneous/fonts/folksxxheavy-webfont.woff') format('woff'),
+         url('../miscellaneous/fonts/folksxxheavy-webfont.ttf') format('truetype'),
+         url('../miscellaneous/fonts/folksxxheavy-webfont.svg#FolksXXHeavy') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

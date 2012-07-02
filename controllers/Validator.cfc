@@ -40,7 +40,7 @@ component extends="Controller"{
 			}else{
 				
 				results.pass = false;
-				results.message = "Could not validate the coupon code.";
+				results.message = "Looks like you don't have access to validate this coupon code.\";
 				
 			}
 			
@@ -51,7 +51,7 @@ component extends="Controller"{
 	}
 	
 	
-	private function couponCode(code){
+	private function validateCoupon(code){
 		
 		var coupon = model("coupon").findOneByCouponcode(arguments.code);
 		var companyID = "";
@@ -83,6 +83,10 @@ component extends="Controller"{
 						
 						}
 					
+					}else{
+						
+						return false;
+						
 					}
 					
 				}else{
@@ -110,7 +114,7 @@ component extends="Controller"{
 	private function hasAccess(key){
 		
 		//Grab the session companyID. 
-		var companyID = ( structKeyExists(session, "autUser.adminCompany"))? session.authUser.adminCompanyID: 0;
+		var companyID = ( structKeyExists(session, "authUser") && structKeyExists(session.authUser, "adminCompanyID") )? session.authUser.adminCompanyID: 0;
 		var company = "";
 		var accessKey = "";
 		
@@ -118,7 +122,7 @@ component extends="Controller"{
 			
 			company = model("admincompany").findByKey(companyID);
 			
-			if( isObject(companyID) ){
+			if( isObject(company) ){
 				
 				accessKey = company.key;
 				
@@ -132,12 +136,10 @@ component extends="Controller"{
 			
 				return false;
 				
-			}
-			
+			}	
 			
 		}
-		
-		
+			
 	}
 
 }

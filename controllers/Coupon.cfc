@@ -10,8 +10,6 @@ component extends="Controller"{
 	/* Requet coupon. */
 	function requestCoupon(){
 		
-		//writeDump(var="#params#", abort="true");
-		
 		var results = structNew();
 		var campaign = model("campaign").findByKey(params.key);
 		var user = model("user").findOneByEmail("#session.user.email#");
@@ -76,7 +74,7 @@ component extends="Controller"{
 		
 		newCoupon.campaignID = arguments.campaignid;
 		newCoupon.userID = arguments.userid;
-		newCoupon.couponCode = createUUID();
+		newCoupon.couponCode = genCouponCode();
 		newCoupon.issueDate = now();
 		newCoupon.expirationDate = dateAdd('d', days, now());
 		newCoupon.active = true;
@@ -134,6 +132,31 @@ component extends="Controller"{
 			
 		}
 		
+		
+	}
+	
+	/* Generates a coupon code. */
+	private function genCouponCode(){
+		
+		var alphaCharacters = "abcdefghijklmnopqrstuvwxyz";
+		var numericCharacters = "123456789";
+		var allValid = alphaCharacters & numericCharacters;
+		var genCode = [];
+		
+		genCode[1] = mid( numericCharacters, randRange(1, len(numericCharacters)), 1 );
+		genCode[2] = mid( alphaCharacters, randRange(1, len(alphaCharacters)), 1 );
+		
+		for(i=arrayLen(genCode)+1; i LTE 5; i++){
+			
+			genCode[i] = mid( allValid, randRange(1, len(allValid)), 1 );
+			
+		}
+		
+		CreateObject( "java", "java.util.Collections" ).Shuffle(genCode);
+		
+		genCode = arrayToList(genCode,"");
+		
+		return genCode;
 		
 	}
 

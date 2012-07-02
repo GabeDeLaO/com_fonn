@@ -37,8 +37,12 @@
 </script>
 
 
-#styleSheetLinkTag("reset")#
+#styleSheetLinkTag("reset,fonts")#
 <link rel="stylesheet" href="/stylesheets/main.css" type="text/css" id="size-stylesheet"/>
+
+<cfif params.controller IS "main" AND params.action IS "profile">
+	<link rel="stylesheet" href="/miscellaneous/rotator/wt-rotator.css" type="text/css"/>
+</cfif>
 
 </head>
 
@@ -63,6 +67,10 @@
 			#includeContent()#
 		</div>
 		#javascriptIncludeTag("jquery.min,main")#
+		<cfif params.controller IS "main" AND params.action IS "profile">
+			<script type="text/javascript" src="/miscellaneous/rotator/js/jquery.easing.1.3.min.js"></script>
+			<script type="text/javascript" src="/miscellaneous/rotator/js/jquery.wt-rotator.min.js"></script>
+		</cfif>
 	</div>
 </body>
 
