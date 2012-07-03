@@ -9,7 +9,7 @@
 <script type="text/javascript"
       src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBwVCpncPOaSUgfQrO2V4tU-5a9JCXeV_g&sensor=true">
 </script>
-<script type="text/javascript">
+<!---<script type="text/javascript">
   geocoder = new google.maps.Geocoder();
   function initialize() {
     var myOptions = {
@@ -34,7 +34,7 @@
       }
     });
   }
-</script>
+</script>--->
 
 
 #styleSheetLinkTag("reset,fonts")#
@@ -44,10 +44,14 @@
 	<link rel="stylesheet" href="/miscellaneous/rotator/wt-rotator.css" type="text/css"/>
 </cfif>
 
+<cfif params.controller IS "admin" AND params.action IS "editCompany">
+	<link rel="stylesheet" href="/miscellaneous/plupload/js/jquery.plupload.queue/css/jquery.plupload.queue.css" type="text/css" media="screen" />
+</cfif>
+
 </head>
 
 <cfset bodyID = ( structKeyexists(variables,"bodyID") )? variables.bodyID: "" />
-<body id="#bodyID#" onload="initialize()">
+<body id="#bodyID#" onload=""><!---initialize()--->
 	<div id="wrapper">
 		<div id="header">
 			<a href="/"><div id="logo">Fonn.com</div></a>
@@ -71,6 +75,21 @@
 			<script type="text/javascript" src="/miscellaneous/rotator/js/jquery.easing.1.3.min.js"></script>
 			<script type="text/javascript" src="/miscellaneous/rotator/js/jquery.wt-rotator.min.js"></script>
 		</cfif>
+		
+		<cfif params.controller IS "admin" AND params.action IS "editCompany">			
+			<script type="text/javascript" src="http://bp.yahooapis.com/2.4.21/browserplus-min.js"></script>
+			<script type="text/javascript" src="/miscellaneous/plupload/js/plupload.js"></script>
+			<script type="text/javascript" src="/miscellaneous/plupload/js/plupload.gears.js"></script>
+			<script type="text/javascript" src="/miscellaneous/plupload/js/plupload.silverlight.js"></script>
+			<script type="text/javascript" src="/miscellaneous/plupload/js/plupload.flash.js"></script>
+			<script type="text/javascript" src="/miscellaneous/plupload/js/plupload.browserplus.js"></script>
+			<script type="text/javascript" src="/miscellaneous/plupload/js/plupload.html4.js"></script>
+			<script type="text/javascript" src="/miscellaneous/plupload/js/plupload.html5.js"></script>
+			<script type="text/javascript" src="/miscellaneous/plupload/js/jquery.plupload.queue/jquery.plupload.queue.js"></script>
+			
+		</cfif>
+
+		
 	</div>
 </body>
 

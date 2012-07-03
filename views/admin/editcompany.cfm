@@ -1,5 +1,22 @@
 <cfoutput>
 	
+	<div id="uploadForm">
+		
+		<form method="post" action="dump.php">
+			<h1>Events example</h1>
+		
+			<p>Shows how to bind and use all available events.</p>
+		
+			<h3>Log messages</h3>
+			<textarea id="log" style="width: 100%; height: 150px; font-size: 11px" spellcheck="false" wrap="off"></textarea>
+		
+			<h3>Queue widget</h3>
+			<div id="uploader" style="width: 450px; height: 330px;">You browser doesn't support upload.</div>
+			<a id="clear" href="##">Clear queue</a>
+		</form>
+		
+	</div>
+	
 	<div id="feedback">
 	
 	</div>
@@ -70,8 +87,27 @@
 			id="edit-companyBtn"
 		)#
 		
-		<div class="clear"></div>
+		<div id="image-section">
+			
+			<h2>Banners</h2>
+			<a href="">Add a banner</a>
+			
+			<ul>
+				<li>
+					<div class="banner-thumb"></div>
+					<div class="banner-text"></div>
+					<div class="actions">
+						<a href="">Edit</a>
+						<a href="">Remove</a>
+					</div>
+				</li>
+			</ul>
+			
+		</div>
 		
+		<div class="clear"></div>
+			
 	#endFormTag()#
+	
 
 </cfoutput>

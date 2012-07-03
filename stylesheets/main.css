@@ -347,3 +347,50 @@ body#admin{
 #admin-content ul li.dark{
 	background: #ccc;
 }
+
+#image-section{
+	background: #ccc;
+	color: #333;
+	display: block;
+	float: right;
+	height: 120px;
+	margin: 20px 0 0 250px;
+	padding: 10px;
+	position: absolute;
+	width: 620px;
+}
+
+#image-section ul li{
+	list-style: none;
+	margin: 20px 0 0 0;
+}
+
+.banner-thumb{
+	background: #333;
+	display: block;
+	float: left;
+	height: 60px;
+	margin: 0 40px 0 0;
+	width: 200px;
+}
+
+.banner-text{
+	background: #efefef;
+	display: block;
+	float: left;
+	height: 60px;
+	margin: 0 20px 0 0px;
+	width: 200px;
+}
+
+#uploadForm{
+	background: #fff;
+	border: 1px solid #333;
+	display: block;
+	height: 180px;
+	left: 600px;
+	position: absolute;
+	top: 200px;
+	width: 300px;
+	z-index: 100;
+}
