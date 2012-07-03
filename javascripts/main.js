@@ -557,7 +557,7 @@ fnn.plupload = function(){
 			$("#uploader").pluploadQueue({
 				// General settings
 				runtimes: 'html5,gears,browserplus,silverlight,flash,html4',
-				url: 'miscellaneous/plupload/upload.php',
+				url: '/index.cfm/uploader/upload',
 				max_file_size: '10mb',
 				chunk_size: '1mb',
 				unique_names: true,
