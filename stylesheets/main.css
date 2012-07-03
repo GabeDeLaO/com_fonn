@@ -353,7 +353,7 @@ body#admin{
 	color: #333;
 	display: block;
 	float: right;
-	height: 120px;
+	/*height: 120px;*/
 	margin: 20px 0 0 250px;
 	padding: 10px;
 	position: absolute;
@@ -361,8 +361,9 @@ body#admin{
 }
 
 #image-section ul li{
+	float: left;
 	list-style: none;
-	margin: 20px 0 0 0;
+	margin: 20px 0 20px 0;
 }
 
 .banner-thumb{
@@ -371,6 +372,7 @@ body#admin{
 	float: left;
 	height: 60px;
 	margin: 0 40px 0 0;
+	overflow: hidden;
 	width: 200px;
 }
 
@@ -381,6 +383,10 @@ body#admin{
 	height: 60px;
 	margin: 0 20px 0 0px;
 	width: 200px;
+}
+
+.actions{
+	float: left;
 }
 
 #uploadForm{
@@ -401,4 +407,10 @@ body#admin{
 #uploadForm a#clear{
 	color: white;
 	margin: 20px 0 0 0;
+}
+
+#admin .bannerText{
+	display: none;
+	height: 50px;
+	width: 200px;
 }

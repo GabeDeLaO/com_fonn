@@ -81,16 +81,9 @@
 			<h2>Banners</h2>
 			<a id="add-banner" href="">Add a banner</a>
 			
-			<ul>
-				<li>
-					<div class="banner-thumb"></div>
-					<div class="banner-text"></div>
-					<div class="actions">
-						<a href="">Edit</a>
-						<a href="">Remove</a>
-					</div>
-				</li>
-			</ul>
+			<div id="bannersList">
+			#includePartial("banners")#
+			</div>
 			
 		</div>
 		

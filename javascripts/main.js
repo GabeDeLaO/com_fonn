@@ -551,7 +551,7 @@ fnn.plupload = function(){
 					}
 				});
 		
-				$('#log').val($('#log').val() + str + "\r\n");
+				//$('#log').val($('#log').val() + str + "\r\n");
 			}
 		
 			$("#uploader").pluploadQueue({
@@ -633,6 +633,8 @@ fnn.plupload = function(){
 					FileUploaded: function(up, file, info) {
 						// Called when a file has finished uploading
 						log('[FileUploaded] File:', file, "Info:", info);
+						// Reload the partial.
+						$("#bannersList").load("/index.cfm/admin/banners");
 					},
 		
 					ChunkUploaded: function(up, file, info) {
@@ -657,6 +659,13 @@ fnn.plupload = function(){
 			$('#clear').click(function(e) {
 				e.preventDefault();
 				$("#uploader").pluploadQueue().splice();
+			});
+			$('#close').click(function(e){
+				e.preventDefault();
+				$("#uploadForm").fadeOut("fast",function(){
+					$("#uploader").pluploadQueue().splice();
+				});
+				
 			});
 		});
 	

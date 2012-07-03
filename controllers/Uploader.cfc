@@ -3,12 +3,24 @@
 	function init(){
 		provides("html,json");
 	}
+	
+	private function addImageToProfile(imageName){
+		
+		var companyID = session.currentEdit.companyID;
+		
+		var profileBanner = model("profilebanner").new();
+		profileBanner.companyID = companyID;
+		profileBanner.banner = arguments.imageName;
+		
+		profileBanner.save();
+		
+		return true;
+			
+	}
 
 </cfscript>
 
 <cffunction name="upload" access="public" returnType="any">
-	
-	<cfdump var="#params#" abort/>
 	
 	<cfif 1 IS 2>
 		<cffile action="upload" accept="*" destination="#expandPath('/files')#" nameConflict="makeunique"> 
@@ -23,6 +35,8 @@
             />
                  
 	</cfif>
+	
+	<cfset addImageToProfile(params.name) />
 	
 	<cfset renderText("uploading")/>
 

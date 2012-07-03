@@ -62,12 +62,21 @@ component extends="Controller"{
 	
 	function editCompany(){
 		
+		if( structKeyExists(session,"currentEdit") ){
+			structDelete(session, "currentEdit");
+		}
+		
 		bodyID = "admin";
 		
 		var results = structNew();
 		
 		company = model("company").findByKey(params.key);
 		states = model("state").findAll();
+		
+		//Set the session company being edited.
+		session.currentEdit.companyID = params.key;
+		
+		bannersList = model("profileBanner").findAll(where="companyID=#params.key#");
 		
 		if( isAjax() && isPost() ){
 			
@@ -212,6 +221,16 @@ component extends="Controller"{
 		
 		bodyID = "admin";
 		
+		
+	}
+	
+	function banners(){
+		
+		var companyID = session.currentEdit.companyID;
+		
+		bannersList = model("profileBanner").findAll(where="companyID=#companyID#");
+		
+		renderPartial("banners");
 		
 	}
 
