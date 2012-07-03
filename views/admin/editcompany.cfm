@@ -2,18 +2,7 @@
 	
 	<div id="uploadForm">
 		
-		<form method="post" action="dump.php">
-			<h1>Events example</h1>
-		
-			<p>Shows how to bind and use all available events.</p>
-		
-			<h3>Log messages</h3>
-			<textarea id="log" style="width: 100%; height: 150px; font-size: 11px" spellcheck="false" wrap="off"></textarea>
-		
-			<h3>Queue widget</h3>
-			<div id="uploader" style="width: 450px; height: 330px;">You browser doesn't support upload.</div>
-			<a id="clear" href="##">Clear queue</a>
-		</form>
+		#includePartial("uploader")#
 		
 	</div>
 	
@@ -90,7 +79,7 @@
 		<div id="image-section">
 			
 			<h2>Banners</h2>
-			<a href="">Add a banner</a>
+			<a id="add-banner" href="">Add a banner</a>
 			
 			<ul>
 				<li>

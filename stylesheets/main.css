@@ -384,13 +384,21 @@ body#admin{
 }
 
 #uploadForm{
-	background: #fff;
+	background: #000;
 	border: 1px solid #333;
 	display: block;
-	height: 180px;
 	left: 600px;
 	position: absolute;
 	top: 200px;
-	width: 300px;
+	width: 500px;
 	z-index: 100;
+}
+
+#uploadForm form{
+	background: #333;
+}
+
+#uploadForm a#clear{
+	color: white;
+	margin: 20px 0 0 0;
 }

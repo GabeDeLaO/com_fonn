@@ -499,6 +499,16 @@ pri.SendCoupon = function(couponRequest){
 
 fnn.plupload = function(){
 	
+	$("#uploadForm").hide();
+	
+	$("#add-banner").click(function(e){
+		
+		e.preventDefault();
+		
+		$("#uploadForm").fadeIn("fast");
+		
+	});
+	
 	$(function() {
 			function log() {
 				var str = "";
