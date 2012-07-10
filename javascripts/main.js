@@ -42,6 +42,7 @@ function init(){
 	fnn.plupload();
 	fnn.editBanner();
 	fnn.removeBanner();
+	fnn.googleMaps();
 	
 	if( $(".wt-rotator").length ){
 		
@@ -89,6 +90,43 @@ function init(){
 		})();
 		
 	}
+	
+}
+
+fnn.googleMaps = function(){
+	
+	if( $("#company-location").length ){
+	
+		var geocoder = new google.maps.Geocoder();
+		var address = $("#address").text();
+		var myOptions = {zoom: 8,mapTypeId: google.maps.MapTypeId.ROADMAP};
+	    var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+	    
+	    geocoder.geocode( { 'address': address}, function(results, status) {
+	      if ( status == google.maps.GeocoderStatus.OK ) {
+	        
+	        var contentString = '<h2>'+$("#company-name").text()+'</h2>'+
+	        '<br/>'+'<p>'+address+'</p>'+'<a href="http://maps.google.com/maps?saddr=&daddr='+address+'" target="_blank">Get Directions</a>';
+	        
+	        map.setCenter(results[0].geometry.location);
+	        var infoBubble = new google.maps.InfoWindow({
+		        content: contentString
+	        });
+	        var marker = new google.maps.Marker({
+	            map: map, 
+	            position: results[0].geometry.location,
+	            title: $("#company-name").text()
+	        });
+	        
+	        google.maps.event.addListener(marker, 'click', function() {
+			  infoBubble.open(map,marker);
+			});
+	        
+	      }else{
+	        alert("Geocode was not successful for the following reason: " + status);
+	      }
+	    });     
+     }
 	
 }
 
