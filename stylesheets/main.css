@@ -3,8 +3,9 @@
 }
 
 body{
-	background: url(/images/background.jpg) no-repeat black;
-	font-family: sans-serif;	
+	background: #000 url(/images/background.jpg) fixed no-repeat;
+	background-position:top center;
+	font-family: Folks-BoldFolks-Bold;	
 }
 
 body#profile{
@@ -22,16 +23,19 @@ h2{
 	font-size: 16px;
 }
 
-.greeting{
-	margin: 0px 0 20px 0;
-	padding: 2px;
-}
-
 h5{
 	font-size: 16px;
 	font-weight: bold;
 }
 
+h7{
+	font-size: 20px;
+	color:#F00;
+}
+.greeting{
+	margin: 0px 0 20px 0;
+	padding: 2px;
+}
 #header{
 	float: left;
 	height: 117px;
@@ -48,12 +52,12 @@ h5{
 }
 
 #header-banner{
-	background: white;
+	background: url(/images/banner.jpg);
 	display: block;
 	float: right;
-	height: 117px;
-	margin: 0 55px 0 0;
-	width: 468px;
+	height: 90px;
+	margin: 15px 55px 0 0;
+	width: 528px;
 }
 
 #profile #header{
