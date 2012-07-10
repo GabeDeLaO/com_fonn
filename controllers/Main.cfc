@@ -21,6 +21,7 @@ component extends="Controller"{
 		bodyID = "profile";
 		campaign = model("campaign").findByKey(key=params.key,include="company");
 		state = model("state").findByKey(campaign.company.stateid);
+		banners = model("profileBanner").findAll(where="companyID=#campaign.company.id#");
 		
 	}
 	
