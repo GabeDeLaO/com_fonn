@@ -380,13 +380,25 @@ body#admin{
 	background: #efefef;
 	display: block;
 	float: left;
+	font-size: 12px;
 	height: 60px;
 	margin: 0 20px 0 0px;
 	width: 200px;
 }
 
+.bannerTextDisplay{
+	padding: 10px;
+}
+
 .actions{
 	float: left;
+}
+
+#edit-banner{
+}
+
+#save-banner{
+	display: none;
 }
 
 #uploadForm{

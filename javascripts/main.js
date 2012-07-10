@@ -39,6 +39,8 @@ function init(){
 	fnn.couponLink();
 	
 	fnn.plupload();
+	fnn.editBanner();
+	fnn.removeBanner();
 	
 	if( $(".wt-rotator").length ){
 		
@@ -89,6 +91,113 @@ function init(){
 	
 }
 
+
+fnn.removeBanner = function(){
+	
+	$("body #remove-banner").on("click",function(e){
+		
+		e.preventDefault();
+		
+		var bannerID = $(this).attr("rel");
+		
+		if(confirm("Are you sure you want to delete this banner?")){
+
+			//remove the banner.
+			$.ajax({				
+				type: 'post',
+				url: '/index.cfm/admin/removeBanner'+'?format=json',
+				data: {bannerID:bannerID},
+				error: function(xhr,type,exception){
+					alert("Oops, something went wrong.");
+				},
+				success: function(response){
+					
+					if( response.PASS == true ){
+					
+						$("#feedback").text(response.message);
+						$("li#"+bannerID).remove();
+					
+					}else{
+						
+						$("#feedback").text(response.message);
+						
+					}
+					
+				}
+			});
+		
+		}
+	
+	});
+}
+
+fnn.editBanner = function(){
+	
+	$("body #edit-banner").on("click",function(e){
+		
+		e.preventDefault();
+		var bannerID = $(this).attr("rel");
+		var li = $("li#"+bannerID);
+		var bannerTextField = li.find($("#bannerText"+bannerID));
+		var bannerTextDisp = li.find($(".bannerTextDisplay"));
+		var saveBannerLink = $("#save-banner[rel='"+bannerID+"']");
+		var editBannerLink = $("#edit-banner[rel='"+bannerID+"']");
+		
+		bannerTextDisp.hide("fast",function(){
+			
+			bannerTextField.show().focus();	
+			
+		});
+		
+		$(this).hide("fast",function(){
+			
+			saveBannerLink.show("slow", function(){
+				
+				$(this).click(function(e){
+					
+					e.preventDefault();
+					
+					//Post the edits.
+					$.ajax({				
+						type: 'post',
+						url: '/index.cfm/admin/editBanner'+'?format=json',
+						data: {bannerID:bannerID, bannerText:bannerTextField.val()},
+						error: function(xhr,type,exception){
+							alert("Oops, something went wrong.");
+						},
+						success: function(response){
+							
+							if( response.PASS == true ){
+								
+								bannerTextDisp.text(bannerTextField.val());
+								
+								bannerTextField.fadeOut("fast",function(){
+									
+									bannerTextDisp.fadeIn("fast",function(){
+										
+										saveBannerLink.hide("fast",function(){
+											
+											editBannerLink.show();
+											
+										});
+										
+									});
+									
+								});
+								
+							}
+						}
+					});
+					
+				});
+				
+			});
+			
+		});
+			
+	});
+	
+}
 
 // Browser width detection.
 fnn.browserDetection = function(){
@@ -634,7 +743,14 @@ fnn.plupload = function(){
 						// Called when a file has finished uploading
 						log('[FileUploaded] File:', file, "Info:", info);
 						// Reload the partial.
-						$("#bannersList").load("/index.cfm/admin/banners");
+						$("#bannersList").load("/index.cfm/admin/banners",function(){
+							
+							//Re-attach the events.
+							fnn.editBanner();
+							fnn.removeBanner();
+							
+						});
+						
 					},
 		
 					ChunkUploaded: function(up, file, info) {

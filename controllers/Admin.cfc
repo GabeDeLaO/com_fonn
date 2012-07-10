@@ -233,5 +233,52 @@ component extends="Controller"{
 		renderPartial("banners");
 		
 	}
+	
+	function editBanner(){
+		
+		var results = structNew();
+		
+		if( isPost() AND isAjax() ){
+			
+			banner = model("profilebanners").findByKey(params.bannerID);
+			banner.text = params.bannerText;
+			
+			if( banner.save() ){
+				
+				results.pass = true;
+				results.message = "You have updated the banner!";
+				
+			}else{
+				
+				results.pass = false;
+				results.message = "Something went wrong!";
+				
+			}
+			
+		}
+		
+		renderWith(results);
+		
+	}
+	
+	function removeBanner(){
+		
+		var results = structNew();
+		
+		if( isPost() AND isAjax() ){
+			
+			banner = model("profilebanner").findByKey(params.bannerID);
+			fileDelete("#expandPath('/images/campaigns/big')#/#banner.banner#");
+			
+			banner.delete();
+			
+			results.pass = true;
+			results.message = "You have removed the banner!";
+			
+		}
+		
+		renderWith(results);
+		
+	}
 
 }
