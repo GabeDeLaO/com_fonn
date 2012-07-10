@@ -358,7 +358,7 @@ body#admin{
 	display: block;
 	float: right;
 	/*height: 120px;*/
-	margin: 20px 0 0 250px;
+	margin: 240px 0 0 250px;
 	padding: 10px;
 	position: absolute;
 	width: 620px;
@@ -429,4 +429,14 @@ body#admin{
 	display: none;
 	height: 50px;
 	width: 200px;
+}
+
+#image-profile-section{
+	background: #ccc;
+	color: black;
+	float: left;
+	margin: 20px 0 0 250px;
+	padding: 10px;
+	position: absolute;
+	width: 620px;
 }

@@ -87,6 +87,17 @@
 			
 		</div>
 		
+		<div id="image-profile-section">
+			<h2>Profile Pic</h2>
+			<a id="add-profile-pic" href="">Add the profile pic.</a>
+			
+			<div id="profile-pic-preview">
+				<img src="/images/campaigns/small/#company.smallImage#" />
+			</div>
+			
+			
+		</div>
+		
 		<div class="clear"></div>
 			
 	#endFormTag()#
