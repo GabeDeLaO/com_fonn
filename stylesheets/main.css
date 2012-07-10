@@ -12,6 +12,11 @@ body#profile{
 	background: black;
 }
 
+.errorMessages{
+	color: red;
+	font-family: "Arial";
+}
+
 #wrapper{
 	background: black;
 	color: white;

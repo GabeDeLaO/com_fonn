@@ -1,7 +1,8 @@
 <cfoutput>
-
-
+	
 	#startFormTag(action="add", id="compaign-add-form", class="ajaxForm")#
+	
+		<div id="feedback"></div>
 		
 		#hiddenFieldTag(
 			name="afterSubmission",
@@ -26,12 +27,14 @@
 		
 		#textField(
 			objectName="campaign",
-			property="startDate"
+			property="startDate",
+			class="datefield"
 		)#
 		
 		#textField(
 			objectName="campaign",
-			property="endDate"
+			property="endDate",
+			class="datefield"
 		)#
 		
 		#textArea(
@@ -68,6 +71,8 @@
 		#submitTag(
 			value="Create Campaign"
 		)#
+		
+		<div class="clear"></div>
 	
 	#endFormTag()#
 

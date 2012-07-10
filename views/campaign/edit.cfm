@@ -2,6 +2,8 @@
 
 	#startFormTag(action="edit", id="compaign-edit-form", class="ajaxForm", key=params.key)#
 		
+		<div id="feedback"></div>
+			
 		#hiddenFieldTag(
 			name="afterSubmission",
 			value="relocate"	
@@ -54,6 +56,11 @@
 			name="couponExpirationTimeSpan",
 			options=timeSpans,
 			selected=campaign.couponTimeSpan
+		)#
+		
+		#textField(
+			objectName="campaign",
+			property="campaignValue"
 		)#
 		
 		#textArea(

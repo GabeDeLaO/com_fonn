@@ -43,6 +43,7 @@ function init(){
 	fnn.editBanner();
 	fnn.removeBanner();
 	fnn.googleMaps();
+	fnn.dateFields();
 	
 	if( $(".wt-rotator").length ){
 		
@@ -90,6 +91,16 @@ function init(){
 		})();
 		
 	}
+	
+}
+
+fnn.dateFields = function(){
+	
+	$(".datefield").each(function(){
+		
+		$(this).datepicker();
+		
+	});
 	
 }
 

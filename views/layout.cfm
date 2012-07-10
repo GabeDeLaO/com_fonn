@@ -52,6 +52,7 @@ var myOptions = {
 </script>
 
 #styleSheetLinkTag("reset,fonts")#
+<link type="text/css" href="/stylesheets/jquery-ui-1.8.21.custom.css" rel="stylesheet" />
 <link rel="stylesheet" href="/stylesheets/main.css" type="text/css" id="size-stylesheet"/>
 
 <cfif params.controller IS "main" AND params.action IS "profile">
@@ -84,7 +85,7 @@ var myOptions = {
 			<div class="ajaxLoader"></div>
 			#includeContent()#
 		</div>
-		#javascriptIncludeTag("jquery.min,main")#
+		#javascriptIncludeTag("jquery.min,jquery-ui-1.8.21.custom.min,main")#
 		<cfif params.controller IS "main" AND params.action IS "profile">
 			<script type="text/javascript" src="/miscellaneous/rotator/js/jquery.easing.1.3.min.js"></script>
 			<script type="text/javascript" src="/miscellaneous/rotator/js/jquery.wt-rotator.min.js"></script>

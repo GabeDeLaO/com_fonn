@@ -54,7 +54,7 @@
 		<div class="left">
 		<div id="feedback"></div>
 		
-		<p class="fine-print">*#campaign.restrictions#</p>	
+		<cfif len(campaign.restrictions)><p class="fine-print">*#campaign.restrictions#</p></cfif>
 		
 		<h5>Overview</h5>
 		<p class="overview">#campaign.description#</p>
