@@ -21,6 +21,12 @@ component extends="Model"{
 			property = "campaignValue",
 			message = "Please provide a valid campaign value.",
 			allowBlank = true
+		);
+		
+		validatesNumericalityOf(
+			property = "couponExpiration",
+			message = "Please provide a valid numerical value for the coupon expiration field.",
+			allowBlank = true
 		);		
 
 	}	
