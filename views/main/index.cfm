@@ -13,8 +13,10 @@
 				<div class="coupon-image">
 					<img src="/images/campaigns/small/#campaigns.smallImage#"/>
 				</div>
-				<!---#campaigns.campaignName#---> #DollarFormat(campaigns.campaignValue)#
-			</li>
+				<!---#campaigns.campaignName#---> <center>
+				  <h7>#DollarFormat(campaigns.campaignValue)#</h7>
+				</center>
+		</li>
 		</a>
 	</cfloop>
 	
