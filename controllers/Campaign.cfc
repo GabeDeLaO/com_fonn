@@ -69,7 +69,7 @@ component extends="Controller"{
 		if( userPermission.role IS 1 ){
 			companies = model("company").findAll();
 		}else{
-			companies = model("company").findAll(where="id=session.authUser.companyid");
+			companies = model("company").findAll(where="id=#session.authUser.adminCompanyID#");
 		}
 		
 		campaign = model("campaign").findByKey(params.key);
