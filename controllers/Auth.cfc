@@ -20,6 +20,8 @@ component extends="Controller"{
 				
 				if( authUser.password IS hash(params.password) ){
 					
+					//writeDump(var="#authUser#", abort="true");
+					
 					//Create the session.
 					session.authUser = structNew();
 					session.authUser.id = authUser.id;

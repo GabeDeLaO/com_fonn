@@ -1,5 +1,4 @@
 <cfoutput>
-
 	<h1>Please login to continue</h1>
 	
 	<div id="feedback"></div>

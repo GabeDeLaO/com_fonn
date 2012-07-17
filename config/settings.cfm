@@ -14,6 +14,7 @@
 --->
 <cfscript>
 	
+	set(reloadPassword="fonn123");
 	set(dataSourceName="fonn");
 	set(URLRewriting="Partial");
 	

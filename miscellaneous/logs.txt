@@ -1,0 +1,40 @@
+Expired 0 on 2012-07-16 
+************************************************************************************ 
+
+Expired 0 on 2012-07-16 
+************************************************************************************ 
+
+struct
+
+COUPONSUPDATED:  
+	[query]
+	 
+	[Record # 1] 
+	ACTIVE: 1 
+	CAMPAIGNID: 8 
+	COUPONCODE: 5i6p3 
+	CREATEDAT: 2012-07-10 13:39:39.0 
+	DELETEDAT: [empty string] 
+	EXPIRATIONDATE: 2012-07-11 13:39:39.0 
+	ID: 5 
+	ISSUEDATE: 2012-07-10 13:39:39.0 
+	REDEEMDATE: [empty string] 
+	UPDATEDAT: 2012-07-10 13:39:39.0 
+	USERID: 1
+	 
+	[Record # 2] 
+	ACTIVE: 1 
+	CAMPAIGNID: 9 
+	COUPONCODE: giy9w 
+	CREATEDAT: 2012-07-10 13:41:03.0 
+	DELETEDAT: [empty string] 
+	EXPIRATIONDATE: 2012-07-11 13:41:03.0 
+	ID: 6 
+	ISSUEDATE: 2012-07-10 13:41:03.0 
+	REDEEMDATE: [empty string] 
+	UPDATEDAT: 2012-07-10 13:41:03.0 
+	USERID: 1
+MESSAGE: Expired 2 on 2012-07-16
+ 
+************************************************************************************ 
+

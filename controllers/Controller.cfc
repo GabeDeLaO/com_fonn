@@ -8,7 +8,7 @@ component extends="Wheels"{
 	/* Login Check. */
 	function authCheck(){
 		
-		if( ! structKeyExists(session, "authUser") ){
+		if( !structKeyExists(session, "authUser") ){
 			
 			flashInsert(info="Please log in to continue.");
 			redirectTo(controller="auth", action="logIn");
