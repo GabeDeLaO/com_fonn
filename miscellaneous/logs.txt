@@ -1,15 +1,22 @@
-Expired 0 on 2012-07-16 
-************************************************************************************ 
-
-Expired 0 on 2012-07-16 
-************************************************************************************ 
-
 struct
 
 COUPONSUPDATED:  
 	[query]
 	 
 	[Record # 1] 
+	ACTIVE: 1 
+	CAMPAIGNID: 5 
+	COUPONCODE: w6lps 
+	CREATEDAT: 2012-07-02 01:27:24.0 
+	DELETEDAT: [empty string] 
+	EXPIRATIONDATE: 2012-07-03 01:27:24.0 
+	ID: 2 
+	ISSUEDATE: 2012-07-02 01:27:24.0 
+	REDEEMDATE: [empty string] 
+	UPDATEDAT: 2012-07-02 01:27:53.0 
+	USERID: 1
+	 
+	[Record # 2] 
 	ACTIVE: 1 
 	CAMPAIGNID: 8 
 	COUPONCODE: 5i6p3 
@@ -22,7 +29,7 @@ COUPONSUPDATED:
 	UPDATEDAT: 2012-07-10 13:39:39.0 
 	USERID: 1
 	 
-	[Record # 2] 
+	[Record # 3] 
 	ACTIVE: 1 
 	CAMPAIGNID: 9 
 	COUPONCODE: giy9w 
@@ -34,7 +41,7 @@ COUPONSUPDATED:
 	REDEEMDATE: [empty string] 
 	UPDATEDAT: 2012-07-10 13:41:03.0 
 	USERID: 1
-MESSAGE: Expired 2 on 2012-07-16
+MESSAGE: Expired 3 coupons on 2012-07-16 8:46:00 PM CDT
  
 ************************************************************************************ 
 
