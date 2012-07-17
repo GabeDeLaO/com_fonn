@@ -8,7 +8,7 @@
 <ul>
 	
 	<cfloop query="campaigns">
-		<a href="index.cfm/main/profile/#campaigns.id#">
+		<a href="/index.cfm/main/profile/#campaigns.id#">
 			<li class="coupon-box">
 				<div class="coupon-image">
 					<img src="/images/campaigns/small/#campaigns.smallImage#"/>

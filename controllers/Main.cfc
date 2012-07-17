@@ -19,10 +19,14 @@ component extends="Controller"{
 	function profile(){
 		
 		bodyID = "profile";
+		today = dateFormat(now(),"yyyy-mm-dd");
 		campaign = model("campaign").findByKey(key=params.key,include="company");
-		state = model("state").findByKey(campaign.company.stateid);
-		banners = model("profileBanner").findAll(where="companyID=#campaign.company.id#");
-		
+		if( campaign.endDate >= today ){
+			state = model("state").findByKey(campaign.company.stateid);
+			banners = model("profileBanner").findAll(where="companyID=#campaign.company.id#");
+		}else{
+			redirectTo(action="index");
+		}
 	}
 	
 	/* Email checker. */

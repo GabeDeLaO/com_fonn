@@ -11,10 +11,11 @@ component extends="Controller"{
 	function requestCoupon(){
 		
 		var results = structNew();
+		today = dateFormat(now(),"yyyy-mm-dd");
 		var campaign = model("campaign").findByKey(params.key);
 		var user = model("user").findOneByEmail("#session.user.email#");
 		
-		if( availableCouponCount(campaign.id) GTE 1){
+		if( availableCouponCount(campaign.id) GTE 1 AND campaign.enddate GTE today){
 			
 			// Check that this user hasn't received this coupon already.
 			if( notDuplicateCoupon(campaign.id,user.id) ){
