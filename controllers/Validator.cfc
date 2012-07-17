@@ -56,7 +56,6 @@ component extends="Controller"{
 		var coupon = model("coupon").findOneByCouponcode(arguments.code);
 		var companyID = "";
 		
-		
 		if( isObject(coupon) ){
 			
 			//Grab the campaign.

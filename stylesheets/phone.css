@@ -16,7 +16,7 @@ body{
 	background: black;
 	color: white;
 	margin: 0px auto;
-	width: 760px;
+	width: 460px;
 }
 
 h2{
@@ -39,14 +39,14 @@ h7{
 #header{
 	float: left;
 	height: 55px;
-	width: 760px;
+	width: 460px;
 }
 
 #logo{
-	background: url(/images/logo.png);
+	background: url(/images/logosmall.png) no-repeat;
 	display: block;
 	float: left;
-	height: 117px;
+	height: 50px;
 	text-indent: -999em;
 	width: 335px;
 }
@@ -55,9 +55,10 @@ h7{
 	background: url(/images/banner.jpg) #fff;
 	display: block;
 	float: right;
-	height: 90px;
-	margin: 15px 100px 0 0;
-	width: 260px;
+	height: 60px;
+	bottom: 0px;
+	position: fixed;
+	width: 460px;
 }
 
 .coupon-box{
@@ -66,7 +67,7 @@ h7{
 	display: block;
 	float: left;
 	height: 180px;
-	margin: 0 45px 45px 0;
+	margin: 0 25px 45px 0;
 	padding: 10px;
 	width: 170px;
 	
@@ -96,8 +97,7 @@ h7{
 .right{
 	clear: both;
 	float: left;
-	margin: 10px 0 0 90px;
-	width: 75%;
+	width: 95%;
 }
 
 #profile-bar{
@@ -107,7 +107,7 @@ h7{
 	float: left;
 	height: 55px;
 	padding: 8px 5px 5px 8px;
-	width: 740px;
+	width: 450px;
 	
     -webkit-border-radius: 10px 10px 0px 0px;
     -moz-border-radius: 10px 10px 0px 0px;
@@ -153,8 +153,8 @@ h7{
 	background: url(/images/profilebanner.jpg);
 	display: block;
 	float: left;
-	height: 300px;
-	width: 720px;
+	height: 120px;
+	width: 420px;
 }
 
 #email-box{
@@ -166,6 +166,7 @@ label{
 	display: block;
 	float: left;
 	line-height: 22px;
+	font-size: 15px;
 }
 
 input[type='text']{
@@ -181,7 +182,7 @@ input[type='submit']{
 	color: #0096ff;
 	font-size: 12px;
 	margin: 10px 0;
-	width: 560px;
+	width: 360px;
 }
 
 #content{
@@ -190,7 +191,7 @@ input[type='submit']{
 	float: left;
 	margin: 0 0 10px 5px;
 	padding: 10px;
-	width: 725px;
+	width: 435px;
 	
 	-webkit-border-radius: 0px 0px 10px 10px;
     -moz-border-radius: 0px 0px 10px 10px;
@@ -204,7 +205,7 @@ input[type='submit']{
 	font-size: 12px;
 	line-height: 1.4em;
 	margin: 5px 0 0 0;
-	width: 720px;
+	width: 430px;
 }
 
 #couponLink{
@@ -230,15 +231,15 @@ input[type='submit']{
 	font-size: 22px;
 	margin: 10px 0 0 0;
 	padding: 10px 0 0 10px;
-	width: 720px;
+	width: 420px;
 }
 
 #main{
     display: block;
     float: left;
     margin: 40px 0 0 0;
-    padding: 10px 0 0 10px;
-    width: 760px;
+    padding: 10px 0 0 20px;
+    width: 460px;
 }
 
 
