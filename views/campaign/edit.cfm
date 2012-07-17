@@ -28,12 +28,14 @@
 		
 		#textField(
 			objectName="campaign",
-			property="startDate"
+			property="startDate",
+			class="datefield"
 		)#
 		
 		#textField(
 			objectName="campaign",
-			property="endDate"
+			property="endDate",
+			class="datefield"
 		)#
 		
 		#textArea(
