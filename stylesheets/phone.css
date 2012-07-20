@@ -7,6 +7,14 @@ body{
 	display: none;
 }
 
+#feedback{
+	background: #efefef;
+	border: 1px solid #999;
+	display: none;
+	padding: 5px;
+	margin: 0 0 10px 0;
+}
+
 .errorMessages{
 	color: red;
 	font-family: "Arial";
@@ -15,8 +23,8 @@ body{
 #wrapper{
 	background: black;
 	color: white;
-	margin: 0px auto;
-	width: 460px;
+	/*margin: 0px auto;*/
+	width: 100%;
 }
 
 h2{
@@ -39,7 +47,7 @@ h7{
 #header{
 	float: left;
 	height: 55px;
-	width: 460px;
+	width: 100%;
 }
 
 #logo{
@@ -48,17 +56,17 @@ h7{
 	float: left;
 	height: 50px;
 	text-indent: -999em;
-	width: 335px;
+	width: 215px;
 }
 
 #header-banner{
 	background: url(/images/banner.jpg) #fff;
 	display: block;
-	float: right;
 	height: 60px;
 	bottom: 0px;
+	left: 0px;
 	position: fixed;
-	width: 460px;
+	width: 100%;
 }
 
 .coupon-box{
@@ -66,14 +74,14 @@ h7{
 	color: black;
 	display: block;
 	float: left;
-	height: 180px;
-	margin: 0 25px 45px 0;
+	height: 120px;
+	margin: 0 25px 25px 0;
 	padding: 10px;
-	width: 170px;
+	width: 110px;
 	
-	-webkit-border-radius: 10px 10px 0px 0px;
-    -moz-border-radius: 10px 10px 0px 0px;
-    border-radius: 10px 10px 0px 0px;
+	-webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
     
     behavior: url(/lib/PIE.htc);
 }
@@ -82,10 +90,14 @@ h7{
 	background: black;
 	display: block;
 	float: left;
-	height: 129px;
+	height: 90px;
 	margin: 0 0 10px 0;
 	overflow: hidden;
-	width: 170px;
+	width: 110px;
+}
+
+.coupon-image img{
+	width: 120px;
 }
 
 .left{
@@ -105,15 +117,15 @@ h7{
 	border: 1px solid #ff0000;
 	display: block;
 	float: left;
-	height: 55px;
+	min-height: 55px;
 	padding: 8px 5px 5px 8px;
-	width: 450px;
+	width: 100%;
 	
-    -webkit-border-radius: 10px 10px 0px 0px;
+    /*-webkit-border-radius: 10px 10px 0px 0px;
     -moz-border-radius: 10px 10px 0px 0px;
     border-radius: 10px 10px 0px 0px;
     
-    behavior: url(/lib/PIE.htc);
+    behavior: url(/lib/PIE.htc);*/
 }
 
 #deal-title{
@@ -125,13 +137,14 @@ h7{
 	border: 1px solid #0096ff;
 	color: white;
 	display: block;
+	float: left;
 	/*height: 22px;*/
-	padding: 2px;
+	padding: 4px 2px;
 	text-align: center;
 	
-	-webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
+	-webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
     
     behavior: url(/lib/PIE.htc);
 }
@@ -141,7 +154,7 @@ h7{
 	display: block;
 	float: left;
 	height: 50px;
-	width: 327px;
+	width: 150px;
 }
 
 #profile #header-banner{
@@ -154,7 +167,8 @@ h7{
 	display: block;
 	float: left;
 	height: 120px;
-	width: 420px;
+	margin: 0 5px 0 0;
+	width: 215px;
 }
 
 #email-box{
@@ -171,7 +185,9 @@ label{
 
 input[type='text']{
 	float: left;
-	margin: 0 5px;
+	margin: 2px 5px 0 0;
+	padding: 3px 2px;
+	width: 150px;
 }
 
 input[type='submit']{
@@ -182,16 +198,16 @@ input[type='submit']{
 	color: #0096ff;
 	font-size: 12px;
 	margin: 10px 0;
-	width: 360px;
+	width: 215px;
 }
 
 #content{
 	background: white;
 	color: black;
 	float: left;
-	margin: 0 0 10px 5px;
+	margin: 0 0 10px 0;
 	padding: 10px;
-	width: 435px;
+	width: 100%;
 	
 	-webkit-border-radius: 0px 0px 10px 10px;
     -moz-border-radius: 0px 0px 10px 10px;
@@ -204,8 +220,7 @@ input[type='submit']{
 .overview{
 	font-size: 12px;
 	line-height: 1.4em;
-	margin: 5px 0 0 0;
-	width: 430px;
+	margin: 5px 0 20px 0;
 }
 
 #couponLink{
@@ -231,15 +246,19 @@ input[type='submit']{
 	font-size: 22px;
 	margin: 10px 0 0 0;
 	padding: 10px 0 0 10px;
-	width: 420px;
+	width: 100%;
 }
 
 #main{
     display: block;
     float: left;
     margin: 40px 0 0 0;
-    padding: 10px 0 0 20px;
-    width: 460px;
+    padding: 10px 0 40px 10px;
+    width: 100%;
+}
+
+a{
+	text-decoration: none;
 }
 
 

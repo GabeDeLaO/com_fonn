@@ -47,8 +47,8 @@ function init(){
 	
 	if( $(".wt-rotator").length ){
 		
-		if( parseInt($(window).width()) < 480 ){
-			var bannerwidth = 460;
+		if( parseInt($(window).width()) < 560 ){
+			var bannerwidth = parseInt($(window).width())-5;
 			var bannerHeight = 120;
 			fnn.rotator(bannerwidth,bannerHeight);
 		}else if ( parseInt($(window).width()) < 768 ){
@@ -63,10 +63,10 @@ function init(){
 		
 		$(window).resize(function() {
 	  	
-		    bwidth = parseInt($(this).width());
+		    bwidth = parseInt($(window).width());
 		    
-		    if( bwidth < 480){
-			    var bannerwidth = 460;
+		    if( bwidth < 560){
+			    var bannerwidth = parseInt($(window).width())-5;
 			    var bannerHeight = 120;
 			    $(".container").html("");
 			    fnn.rotator(bannerwidth,bannerHeight);
@@ -295,7 +295,7 @@ fnn.editBanner = function(){
 // Browser width detection.
 fnn.browserDetection = function(){
 	
-	if ( parseInt($(window).width()) < 480 ){
+	if ( parseInt($(window).width()) <= 560 ){
 		$("#size-stylesheet").attr("href", "/stylesheets/phone.css");
 	}else if ( parseInt($(window).width()) < 768 ){
 		$("#size-stylesheet").attr("href", "/stylesheets/mobile.css");
@@ -308,7 +308,7 @@ fnn.browserDetection = function(){
 	  	
 	    width = parseInt($(this).width());
 	    
-	    if (width < 480){
+	    if (width < 560){
 		    $("#size-stylesheet").attr("href", "/stylesheets/phone.css");
 	    }else if (width < 768) {
 	        $("#size-stylesheet").attr("href", "/stylesheets/mobile.css");

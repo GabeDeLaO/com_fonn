@@ -10,7 +10,7 @@ component extends="Controller"{
 	/* Main Home Page. */
 	function index(){
 		
-		campaigns = model("campaign").findAll(include="company", where="enddate > '#now()#'");
+		campaigns = model("campaign").findAll(include="company");
 		
 	}
 	
