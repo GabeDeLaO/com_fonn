@@ -47,11 +47,13 @@ function init(){
 	
 	if( $(".wt-rotator").length ){
 		
-		if( parseInt($(window).width()) < 560 ){
+		var isiPad = navigator.userAgent.match(/iPad/i) != null;
+		
+		if( parseInt($(window).width()) < 600 ){
 			var bannerwidth = parseInt($(window).width())-5;
 			var bannerHeight = 120;
 			fnn.rotator(bannerwidth,bannerHeight);
-		}else if ( parseInt($(window).width()) < 768 ){
+		}else if ( parseInt($(window).width()) < 800 || isiPad ){
 			var bannerwidth = 760;
 			var bannerHeight = 300;
 			fnn.rotator(bannerwidth,bannerHeight);
@@ -65,12 +67,12 @@ function init(){
 	  	
 		    bwidth = parseInt($(window).width());
 		    
-		    if( bwidth < 560){
+		    if( bwidth < 600){
 			    var bannerwidth = parseInt($(window).width())-5;
 			    var bannerHeight = 120;
 			    $(".container").html("");
 			    fnn.rotator(bannerwidth,bannerHeight);
-		    }else if (bwidth < 768) {
+		    }else if (bwidth < 800 || isiPad) {
 			    var bannerwidth = 760;
 			    var bannerHeight = 300;
 			    $(".container").html("");
@@ -295,10 +297,14 @@ fnn.editBanner = function(){
 // Browser width detection.
 fnn.browserDetection = function(){
 	
-	if ( parseInt($(window).width()) <= 560 ){
+	var isiPad = navigator.userAgent.match(/iPad/i) != null;
+	
+	if ( parseInt($(window).width()) <= 600 ){
 		$("#size-stylesheet").attr("href", "/stylesheets/phone.css");
-	}else if ( parseInt($(window).width()) < 768 ){
+	}else if ( parseInt($(window).width()) < 800 ){
 		$("#size-stylesheet").attr("href", "/stylesheets/mobile.css");
+    }else if (isiPad){
+	    $("#size-stylesheet").attr("href", "/stylesheets/mobile.css");
     } else {
        $("#size-stylesheet").attr("href", "/stylesheets/main.css"); 
     }
@@ -308,10 +314,12 @@ fnn.browserDetection = function(){
 	  	
 	    width = parseInt($(this).width());
 	    
-	    if (width < 560){
+	    if (width < 600){
 		    $("#size-stylesheet").attr("href", "/stylesheets/phone.css");
-	    }else if (width < 768) {
+	    }else if (width < 800) {
 	        $("#size-stylesheet").attr("href", "/stylesheets/mobile.css");
+	    }else if (isiPad){
+		    $("#size-stylesheet").attr("href", "/stylesheets/mobile.css");
 	    } else {
 	       $("#size-stylesheet").attr("href", "/stylesheets/main.css"); 
 	    }

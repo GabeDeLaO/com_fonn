@@ -55,12 +55,13 @@ h7{
 	display: block;
 	float: left;
 	height: 50px;
+	margin: 5px 0 0 5px;
 	text-indent: -999em;
 	width: 215px;
 }
 
 #header-banner{
-	background: url(/images/banner.jpg) #fff;
+	background: url(/images/banner.jpg) #3b3737;
 	display: block;
 	height: 60px;
 	bottom: 0px;
@@ -181,13 +182,14 @@ label{
 	float: left;
 	line-height: 22px;
 	font-size: 15px;
+	margin: 3px 10px 0 0;
 }
 
 input[type='text']{
 	float: left;
 	margin: 2px 5px 0 0;
 	padding: 3px 2px;
-	width: 150px;
+	width: 145px;
 }
 
 input[type='submit']{
@@ -252,7 +254,7 @@ input[type='submit']{
 #main{
     display: block;
     float: left;
-    margin: 40px 0 0 0;
+    margin: 15px 0 0 0;
     padding: 10px 0 40px 10px;
     width: 100%;
 }

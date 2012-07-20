@@ -100,3 +100,76 @@ MESSAGE: Expired 3 coupons on 2012-07-17 2:37:39 AM CDT
  
 ************************************************************************************ 
 
+struct
+
+COUPONSUPDATED:  
+	[query]
+	 
+	[Record # 1] 
+	ACTIVE: 1 
+	CAMPAIGNID: 8 
+	COUPONCODE: 726pi 
+	CREATEDAT: 2012-07-16 21:00:36.0 
+	DELETEDAT: [empty string] 
+	EXPIRATIONDATE: 2012-07-17 21:00:36.0 
+	ID: 7 
+	ISSUEDATE: 2012-07-16 21:00:36.0 
+	REDEEMDATE: [empty string] 
+	UPDATEDAT: 2012-07-16 21:00:36.0 
+	USERID: 1
+	 
+	[Record # 2] 
+	ACTIVE: 1 
+	CAMPAIGNID: 9 
+	COUPONCODE: 1o5ux 
+	CREATEDAT: 2012-07-17 00:56:00.0 
+	DELETEDAT: [empty string] 
+	EXPIRATIONDATE: 2012-07-18 00:56:00.0 
+	ID: 8 
+	ISSUEDATE: 2012-07-17 00:56:00.0 
+	REDEEMDATE: [empty string] 
+	UPDATEDAT: 2012-07-17 00:56:00.0 
+	USERID: 1
+	 
+	[Record # 3] 
+	ACTIVE: 1 
+	CAMPAIGNID: 9 
+	COUPONCODE: 2i13b 
+	CREATEDAT: 2012-07-17 01:13:14.0 
+	DELETEDAT: [empty string] 
+	EXPIRATIONDATE: 2012-07-18 01:13:14.0 
+	ID: 9 
+	ISSUEDATE: 2012-07-17 01:13:14.0 
+	REDEEMDATE: [empty string] 
+	UPDATEDAT: 2012-07-17 01:13:14.0 
+	USERID: 4
+	 
+	[Record # 4] 
+	ACTIVE: 1 
+	CAMPAIGNID: 9 
+	COUPONCODE: 41gzm 
+	CREATEDAT: 2012-07-17 01:13:50.0 
+	DELETEDAT: [empty string] 
+	EXPIRATIONDATE: 2012-07-18 01:13:50.0 
+	ID: 10 
+	ISSUEDATE: 2012-07-17 01:13:50.0 
+	REDEEMDATE: [empty string] 
+	UPDATEDAT: 2012-07-17 01:13:50.0 
+	USERID: 5
+	 
+	[Record # 5] 
+	ACTIVE: 1 
+	CAMPAIGNID: 9 
+	COUPONCODE: leg8p 
+	CREATEDAT: 2012-07-17 01:14:04.0 
+	DELETEDAT: [empty string] 
+	EXPIRATIONDATE: 2012-07-18 01:14:04.0 
+	ID: 11 
+	ISSUEDATE: 2012-07-17 01:14:04.0 
+	REDEEMDATE: [empty string] 
+	UPDATEDAT: 2012-07-17 01:14:04.0 
+	USERID: 6
+MESSAGE: Expired 5 coupons on 2012-07-20 1:00:00 AM CDT
+ 
+************************************************************************************ 
+
