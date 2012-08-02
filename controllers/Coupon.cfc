@@ -6,6 +6,17 @@ component extends="Controller"{
 		
 	}
 	
+	function couponEmail(){
+		
+		campaign = model("campaign").findByKey(1);
+		coupon.couponcode = '123xyz';
+		coupon.expirationDate = now();
+		banner = model("profileBanner").findOne(where="companyID=#campaign.company().id#");
+		
+		renderPage(action="couponEmail", layout="emailLayout");
+		
+	}
+	
 	
 	/* Requet coupon. */
 	function requestCoupon(){
@@ -23,13 +34,19 @@ component extends="Controller"{
 				newCoupon = create(campaign.id, user.id);
 				
 				if( isObject(newCoupon) ){
-				
+					
+					//Grab a banner. 
+					var banner = model("profileBanner").findOne(where="companyID=#campaign.company.id#");
+					
 					sendEmail(
 						from="admin@fonn.com",
 						to="#user.email#",
 						template="couponEmail",
+						layout="emailLayout",
 						subject="Your Deal For: #campaign.campaignName#",
-						coupon=newCoupon
+						coupon=newCoupon,
+						campaign=campaign,
+						banner=banner
 					);
 				
 					results.pass = true;

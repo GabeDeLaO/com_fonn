@@ -42,6 +42,7 @@ component extends="Controller"{
 		if( isaJAX() && isPost() ){
 			
 			newCompany = model("company").new(params.company);
+			newCompany.adminCompanyID = session.authUser.adminCompanyID;
 			
 			if( newCompany.save() ){
 				

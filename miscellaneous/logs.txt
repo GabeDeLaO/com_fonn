@@ -173,3 +173,97 @@ MESSAGE: Expired 5 coupons on 2012-07-20 1:00:00 AM CDT
  
 ************************************************************************************ 
 
+struct
+
+COUPONSUPDATED:  
+	[query]
+	 
+	[Record # 1] 
+	ACTIVE: 1 
+	CAMPAIGNID: 8 
+	COUPONCODE: ji8l2 
+	CREATEDAT: 2012-07-19 22:03:47.0 
+	DELETEDAT: [empty string] 
+	EXPIRATIONDATE: 2012-07-20 22:03:47.0 
+	ID: 12 
+	ISSUEDATE: 2012-07-19 22:03:47.0 
+	REDEEMDATE: [empty string] 
+	UPDATEDAT: 2012-07-19 22:03:47.0 
+	USERID: 7
+	 
+	[Record # 2] 
+	ACTIVE: 1 
+	CAMPAIGNID: 9 
+	COUPONCODE: 7ej59 
+	CREATEDAT: 2012-07-19 23:34:16.0 
+	DELETEDAT: [empty string] 
+	EXPIRATIONDATE: 2012-07-20 23:34:16.0 
+	ID: 13 
+	ISSUEDATE: 2012-07-19 23:34:16.0 
+	REDEEMDATE: [empty string] 
+	UPDATEDAT: 2012-07-19 23:34:16.0 
+	USERID: 8
+	 
+	[Record # 3] 
+	ACTIVE: 1 
+	CAMPAIGNID: 8 
+	COUPONCODE: 4vy23 
+	CREATEDAT: 2012-07-19 23:38:04.0 
+	DELETEDAT: [empty string] 
+	EXPIRATIONDATE: 2012-07-20 23:38:04.0 
+	ID: 14 
+	ISSUEDATE: 2012-07-19 23:38:04.0 
+	REDEEMDATE: [empty string] 
+	UPDATEDAT: 2012-07-19 23:38:04.0 
+	USERID: 8
+	 
+	[Record # 4] 
+	ACTIVE: 1 
+	CAMPAIGNID: 9 
+	COUPONCODE: b3mp5 
+	CREATEDAT: 2012-07-19 23:59:13.0 
+	DELETEDAT: [empty string] 
+	EXPIRATIONDATE: 2012-07-20 23:59:13.0 
+	ID: 15 
+	ISSUEDATE: 2012-07-19 23:59:13.0 
+	REDEEMDATE: [empty string] 
+	UPDATEDAT: 2012-07-19 23:59:13.0 
+	USERID: 9
+	 
+	[Record # 5] 
+	ACTIVE: 1 
+	CAMPAIGNID: 8 
+	COUPONCODE: oq69f 
+	CREATEDAT: 2012-07-20 00:03:43.0 
+	DELETEDAT: [empty string] 
+	EXPIRATIONDATE: 2012-07-21 00:03:43.0 
+	ID: 16 
+	ISSUEDATE: 2012-07-20 00:03:43.0 
+	REDEEMDATE: [empty string] 
+	UPDATEDAT: 2012-07-20 00:03:43.0 
+	USERID: 9
+MESSAGE: Expired 5 coupons on 2012-07-25 1:00:02 AM CDT
+ 
+************************************************************************************ 
+
+struct
+
+COUPONSUPDATED:  
+	[query]
+	 
+	[Record # 1] 
+	ACTIVE: 1 
+	CAMPAIGNID: 8 
+	COUPONCODE: 8i4b6 
+	CREATEDAT: 2012-07-29 18:26:04.0 
+	DELETEDAT: [empty string] 
+	EXPIRATIONDATE: 2012-07-30 18:26:04.0 
+	ID: 1 
+	ISSUEDATE: 2012-07-29 18:26:04.0 
+	REDEEMDATE: [empty string] 
+	UPDATEDAT: 2012-07-29 18:26:04.0 
+	USERID: 1
+MESSAGE: Expired 1 coupons on 2012-08-01 1:00:02 AM CDT
+ 
+************************************************************************************ 
+
