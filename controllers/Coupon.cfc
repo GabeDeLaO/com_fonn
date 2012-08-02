@@ -36,7 +36,7 @@ component extends="Controller"{
 				if( isObject(newCoupon) ){
 					
 					//Grab a banner. 
-					var banner = model("profileBanner").findOne(where="companyID=#campaign.company.id#");
+					var banner = model("profileBanner").findOne(where="companyID=#campaign.company().id#");
 					
 					sendEmail(
 						from="admin@fonn.com",
