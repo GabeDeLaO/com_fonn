@@ -14,7 +14,7 @@
 	
 	<tr>
 		<td>
-			<img src="http://fonnbeta.irisevolution.com/images/campaigns/big/#banner.banner#"/>
+			<img src="http://fonnbeta.irisevolution.com/images/campaigns/big/#banner.banner#" width="800"/>
 		</td>
 	</tr>
 	

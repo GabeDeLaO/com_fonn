@@ -6,7 +6,7 @@ component extends="Controller"{
 		
 	}
 	
-	function couponEmail(){
+	/*function couponEmail(){
 		
 		campaign = model("campaign").findByKey(1);
 		coupon.couponcode = '123xyz';
@@ -15,7 +15,7 @@ component extends="Controller"{
 		
 		renderPage(action="couponEmail", layout="emailLayout");
 		
-	}
+	}*/
 	
 	
 	/* Requet coupon. */
@@ -39,11 +39,11 @@ component extends="Controller"{
 					var banner = model("profileBanner").findOne(where="companyID=#campaign.company().id#");
 					
 					sendEmail(
-						from="admin@fonn.com",
+						from="fonn-admin@fonn.com",
 						to="#user.email#",
 						template="couponEmail",
 						layout="emailLayout",
-						subject="Your Deal For: #campaign.campaignName#",
+						subject="Fonn.com Your Deal For: #campaign.campaignName#",
 						coupon=newCoupon,
 						campaign=campaign,
 						banner=banner
