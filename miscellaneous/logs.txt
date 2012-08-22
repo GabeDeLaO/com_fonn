@@ -267,3 +267,51 @@ MESSAGE: Expired 1 coupons on 2012-08-01 1:00:02 AM CDT
  
 ************************************************************************************ 
 
+struct
+
+COUPONSUPDATED:  
+	[query]
+MESSAGE: Expired 0 coupons on 2012-08-06 1:00:06 AM CDT
+ 
+************************************************************************************ 
+
+struct
+
+COUPONSUPDATED:  
+	[query]
+MESSAGE: Expired 0 coupons on 2012-08-07 1:00:04 AM CDT
+ 
+************************************************************************************ 
+
+struct
+
+COUPONSUPDATED:  
+	[query]
+MESSAGE: Expired 0 coupons on 2012-08-13 1:00:10 AM CDT
+ 
+************************************************************************************ 
+
+struct
+
+COUPONSUPDATED:  
+	[query]
+MESSAGE: Expired 0 coupons on 2012-08-15 1:00:07 AM CDT
+ 
+************************************************************************************ 
+
+struct
+
+COUPONSUPDATED:  
+	[query]
+MESSAGE: Expired 0 coupons on 2012-08-16 1:00:06 AM CDT
+ 
+************************************************************************************ 
+
+struct
+
+COUPONSUPDATED:  
+	[query]
+MESSAGE: Expired 0 coupons on 2012-08-21 1:00:06 AM CDT
+ 
+************************************************************************************ 
+
